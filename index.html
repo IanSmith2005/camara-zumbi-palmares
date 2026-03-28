@@ -13,9 +13,6 @@
     :root {
       --marrom: #2C1A0E;
       --laranja: #F5A623;
-      --cor: #1A6B47;
-      --cor-light: rgba(26,107,71,0.12);
-      --cor-border: rgba(26,107,71,0.32);
       --teal: #4A90A4;
       --vermelho: #C0392B;
       --offwhite: #F0EDE9;
@@ -46,7 +43,7 @@
       background: rgba(44,26,14,0.96);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(26,107,71,0.28);
+      border-bottom: 1px solid rgba(245,166,35,0.18);
     }
 
     .nav-logo {
@@ -91,7 +88,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 70% 55% at 75% 50%, rgba(26,107,71,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 55% at 75% 50%, rgba(245,166,35,0.07) 0%, transparent 60%),
         radial-gradient(ellipse 45% 45% at 15% 20%, rgba(74,144,164,0.05) 0%, transparent 55%);
     }
 
@@ -103,7 +100,7 @@
       width: 700px;
       height: 700px;
       border-radius: 50%;
-      border: 1px solid rgba(26,107,71,0.07);
+      border: 1px solid rgba(245,166,35,0.06);
       pointer-events: none;
     }
 
@@ -112,7 +109,7 @@
       position: absolute;
       inset: 60px;
       border-radius: 50%;
-      border: 1px solid rgba(26,107,71,0.05);
+      border: 1px solid rgba(245,166,35,0.04);
     }
 
     .hero-content {
@@ -125,8 +122,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--cor-light);
-      border: 1px solid var(--cor-border);
+      background: rgba(245,166,35,0.11);
+      border: 1px solid rgba(245,166,35,0.32);
       border-radius: 100px;
       padding: 8px 18px;
       margin-bottom: 30px;
@@ -137,14 +134,14 @@
       font-weight: 700;
       letter-spacing: 0.13em;
       text-transform: uppercase;
-      color: #5ecf95;
+      color: var(--laranja);
     }
 
     .hero-eyebrow::before {
       content: '';
       width: 7px; height: 7px;
       border-radius: 50%;
-      background: #5ecf95;
+      background: var(--laranja);
       animation: pulse 2s infinite;
     }
 
@@ -165,7 +162,7 @@
     .hero h1 em {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
-      color: #5ecf95;
+      color: var(--laranja);
     }
 
     .hero-sub {
@@ -236,7 +233,7 @@
     .hero-stat-num {
       font-weight: 700;
       font-size: 1.65rem;
-      color: #5ecf95;
+      color: var(--laranja);
       line-height: 1.1;
       margin-bottom: 6px;
     }
@@ -261,7 +258,7 @@
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--cor);
+      color: var(--laranja);
       margin-bottom: 14px;
       position: relative;
       padding-left: 20px;
@@ -272,7 +269,7 @@
       left: 0; top: 50%;
       transform: translateY(-50%);
       width: 12px; height: 2px;
-      background: var(--cor);
+      background: var(--laranja);
     }
 
     .section-title {
@@ -332,7 +329,7 @@
 
     .camara-feature-icon {
       width: 42px; height: 42px;
-      background: rgba(26,107,71,0.1);
+      background: rgba(245,166,35,0.1);
       border-radius: 9px;
       display: flex;
       align-items: center;
@@ -341,7 +338,7 @@
     }
     .camara-feature-icon svg {
       width: 19px; height: 19px;
-      stroke: var(--cor);
+      stroke: var(--laranja);
       fill: none;
       stroke-width: 2;
       stroke-linecap: round;
@@ -382,7 +379,7 @@
       transition: border-color 0.25s, background 0.25s;
     }
     .quem-card:hover {
-      border-color: rgba(26,107,71,0.35);
+      border-color: rgba(245,166,35,0.28);
       background: rgba(255,255,255,0.06);
     }
 
@@ -392,9 +389,9 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--cor);
-      background: rgba(26,107,71,0.1);
-      border: 1px solid rgba(26,107,71,0.28);
+      color: var(--laranja);
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.22);
       padding: 5px 12px;
       border-radius: 100px;
       margin-bottom: 22px;
@@ -452,7 +449,7 @@
 
     .beneficio-icon {
       width: 50px; height: 50px;
-      background: rgba(26,107,71,0.1);
+      background: rgba(245,166,35,0.1);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -461,7 +458,7 @@
     }
     .beneficio-icon svg {
       width: 22px; height: 22px;
-      stroke: var(--cor);
+      stroke: var(--laranja);
       fill: none;
       stroke-width: 2;
       stroke-linecap: round;
@@ -497,7 +494,7 @@
       top: 27px;
       left: 27px; right: 27px;
       height: 2px;
-      background: linear-gradient(90deg, var(--cor) 0%, rgba(26,107,71,0.15) 100%);
+      background: linear-gradient(90deg, var(--laranja) 0%, rgba(245,166,35,0.15) 100%);
     }
 
     .step {
@@ -514,7 +511,7 @@
       width: 54px; height: 54px;
       border-radius: 50%;
       background: var(--marrom);
-      color: var(--cor);
+      color: var(--laranja);
       font-weight: 700;
       font-size: 1rem;
       display: flex;
@@ -523,10 +520,10 @@
       margin-bottom: 18px;
       position: relative;
       z-index: 1;
-      border: 2.5px solid var(--cor);
+      border: 2.5px solid var(--laranja);
       transition: background 0.2s, color 0.2s;
     }
-    .step:hover .step-num { background: var(--cor); color: #fff; }
+    .step:hover .step-num { background: var(--laranja); color: var(--marrom); }
 
     .step-title {
       font-weight: 600;
@@ -571,7 +568,7 @@
       width: 38px; height: 38px;
       border-radius: 50%;
       background: var(--marrom);
-      color: var(--cor);
+      color: var(--laranja);
       font-weight: 700;
       font-size: 0.825rem;
       display: flex;
@@ -605,7 +602,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 55% 75% at 82% 50%, rgba(26,107,71,0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse 55% 75% at 82% 50%, rgba(245,166,35,0.07) 0%, transparent 60%);
     }
 
     .resposta-inner {
@@ -653,7 +650,7 @@
     .resposta-rapida h2 em {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
-      color: var(--cor);
+      color: var(--laranja);
     }
 
     .resposta-rapida > .section-inner > .resposta-inner > div > p {
@@ -685,7 +682,7 @@
     .resposta-feature-dot {
       width: 8px; height: 8px;
       border-radius: 50%;
-      background: var(--cor);
+      background: var(--laranja);
       flex-shrink: 0;
       margin-top: 6px;
     }
@@ -802,7 +799,7 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    footer ul li a:hover { color: #5ecf95; }
+    footer ul li a:hover { color: var(--laranja); }
 
     .footer-bottom {
       max-width: 1200px;
