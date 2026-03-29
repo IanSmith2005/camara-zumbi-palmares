@@ -952,7 +952,14 @@
     @media (max-width: 960px) {
       nav { padding: 8px 24px; }
       section { padding: 80px 24px; }
-      .hero { padding: 120px 24px 0; height: 100vh; min-height: 100vh; }
+      .hero {
+        padding: 120px 24px 0;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 100vh;
+        justify-content: space-between;
+        flex-direction: column;
+      }
 
       .camara-grid,
       .quem-grid,
@@ -977,12 +984,15 @@
       .step-num { margin-bottom: 0; flex-shrink: 0; }
       .step-title { max-width: none; padding-top: 14px; }
 
+      .hero-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
       .hero-stats {
-        position: absolute;
-        bottom: 0;
-        left: 0; right: 0;
+        position: static;
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0 -24px;
+        width: calc(100% + 48px);
       }
       .hero-stat {
         flex: 1 1 50%;
