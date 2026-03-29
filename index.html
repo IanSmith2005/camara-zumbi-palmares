@@ -12,7 +12,7 @@
 
     :root {
       --marrom: #2C1A0E;
-      --laranja: #F5A623;
+      --laranja: #D4AF37;
       --teal: #4A90A4;
       --vermelho: #C0392B;
       --offwhite: #F0EDE9;
@@ -43,7 +43,7 @@
       background: rgba(44,26,14,0.96);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(245,166,35,0.18);
+      border-bottom: 1px solid rgba(212,175,55,0.25);
     }
 
     .nav-logo {
@@ -69,7 +69,21 @@
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
     }
-    .nav-cta:hover { background: #e8961a; transform: translateY(-1px); }
+    .nav-cta:hover { background: #b89428; transform: translateY(-1px); }
+
+    .nav-cta-outline {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 11px 20px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-cta-outline:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 
     /* ─── HERO ─── */
     .hero {
@@ -78,7 +92,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 140px 60px 200px;
+      height: 100vh;
+      padding: 100px 60px 160px;
       background: var(--marrom);
       overflow: hidden;
     }
@@ -88,7 +103,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 70% 55% at 75% 50%, rgba(245,166,35,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 55% at 75% 50%, rgba(212,175,55,0.08) 0%, transparent 60%),
         radial-gradient(ellipse 45% 45% at 15% 20%, rgba(74,144,164,0.05) 0%, transparent 55%);
     }
 
@@ -100,7 +115,7 @@
       width: 700px;
       height: 700px;
       border-radius: 50%;
-      border: 1px solid rgba(245,166,35,0.06);
+      border: 1px solid rgba(212,175,55,0.08);
       pointer-events: none;
     }
 
@@ -109,7 +124,7 @@
       position: absolute;
       inset: 60px;
       border-radius: 50%;
-      border: 1px solid rgba(245,166,35,0.04);
+      border: 1px solid rgba(212,175,55,0.05);
     }
 
     .hero-content {
@@ -119,31 +134,21 @@
     }
 
     .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(245,166,35,0.11);
-      border: 1px solid rgba(245,166,35,0.32);
-      border-radius: 100px;
-      padding: 8px 18px;
-      margin-bottom: 30px;
+      display: inline-block;
+      border-left: 3px solid var(--laranja);
+      padding: 2px 0 2px 14px;
+      margin-bottom: 16px;
     }
 
     .hero-eyebrow span {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: var(--laranja);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: rgba(255,255,255,0.65);
     }
 
-    .hero-eyebrow::before {
-      content: '';
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--laranja);
-      animation: pulse 2s infinite;
-    }
+    .hero-eyebrow::before { display: none; }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
@@ -156,7 +161,7 @@
       font-size: clamp(2.4rem, 4.5vw, 3.8rem);
       line-height: 1.1;
       color: #fff;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
     .hero h1 em {
@@ -169,7 +174,7 @@
       font-size: clamp(1rem, 1.6vw, 1.12rem);
       line-height: 1.72;
       color: rgba(255,255,255,0.72);
-      margin-bottom: 44px;
+      margin-bottom: 32px;
       max-width: 580px;
     }
 
@@ -193,7 +198,7 @@
       display: inline-block;
       transition: all 0.2s;
     }
-    .btn-primary:hover { background: #e8961a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,0.28); }
+    .btn-primary:hover { background: #b89428; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.35); }
 
     .btn-outline {
       background: transparent;
@@ -217,14 +222,14 @@
       bottom: 0;
       left: 0; right: 0;
       display: flex;
-      background: rgba(0,0,0,0.22);
+      background: rgba(0,0,0,0.28);
       border-top: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(6px);
     }
 
     .hero-stat {
       flex: 1;
-      padding: 26px 28px;
+      padding: 18px 28px;
       border-right: 1px solid rgba(255,255,255,0.08);
       text-align: center;
     }
@@ -232,16 +237,17 @@
 
     .hero-stat-num {
       font-weight: 700;
-      font-size: 1.65rem;
+      font-size: 1.25rem;
       color: var(--laranja);
       line-height: 1.1;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .hero-stat-label {
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.45;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.4;
     }
 
     /* ─── SHARED ─── */
@@ -275,8 +281,8 @@
     .section-title {
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
-      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-      line-height: 1.18;
+      font-size: clamp(2.2rem, 3.5vw, 3rem);
+      line-height: 1.12;
       color: var(--marrom);
       margin-bottom: 16px;
     }
@@ -287,7 +293,7 @@
     }
 
     .section-subtitle {
-      font-size: 1.02rem;
+      font-size: 0.9rem;
       line-height: 1.75;
       color: #5a4030;
       max-width: 640px;
@@ -329,7 +335,7 @@
 
     .camara-feature-icon {
       width: 42px; height: 42px;
-      background: rgba(245,166,35,0.1);
+      background: rgba(212,175,55,0.1);
       border-radius: 9px;
       display: flex;
       align-items: center;
@@ -348,12 +354,12 @@
     .camara-feature-text strong {
       display: block;
       font-weight: 600;
-      font-size: 0.93rem;
+      font-size: 1rem;
       color: var(--marrom);
       margin-bottom: 4px;
     }
     .camara-feature-text span {
-      font-size: 0.865rem;
+      font-size: 0.8rem;
       color: #7a5a40;
       line-height: 1.55;
     }
@@ -375,11 +381,26 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.09);
       border-radius: var(--radius);
-      padding: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: border-color 0.25s, background 0.25s;
     }
+
+    .quem-card-img {
+      width: 100%;
+      display: block;
+    }
+
+    .quem-card-body {
+      padding: 32px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
     .quem-card:hover {
-      border-color: rgba(245,166,35,0.28);
+      border-color: rgba(212,175,55,0.35);
       background: rgba(255,255,255,0.06);
     }
 
@@ -390,11 +411,11 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--laranja);
-      background: rgba(245,166,35,0.1);
-      border: 1px solid rgba(245,166,35,0.22);
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.28);
       padding: 5px 12px;
       border-radius: 100px;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
 
     .quem-card-logo {
@@ -449,7 +470,7 @@
 
     .beneficio-icon {
       width: 50px; height: 50px;
-      background: rgba(245,166,35,0.1);
+      background: rgba(212,175,55,0.1);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -494,7 +515,7 @@
       top: 27px;
       left: 27px; right: 27px;
       height: 2px;
-      background: linear-gradient(90deg, var(--laranja) 0%, rgba(245,166,35,0.15) 100%);
+      background: linear-gradient(90deg, var(--laranja) 0%, rgba(212,175,55,0.18) 100%);
     }
 
     .step {
@@ -602,7 +623,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 55% 75% at 82% 50%, rgba(245,166,35,0.07) 0%, transparent 60%);
+      background: radial-gradient(ellipse 55% 75% at 82% 50%, rgba(212,175,55,0.08) 0%, transparent 60%);
     }
 
     .resposta-inner {
@@ -658,6 +679,60 @@
       line-height: 1.72;
       color: rgba(255,255,255,0.68);
       margin-bottom: 34px;
+    }
+
+    .elegibilidade-box {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 34px;
+    }
+    .elegibilidade-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .elegibilidade-icon {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--laranja);
+      color: var(--marrom);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .elegibilidade-header strong {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .elegibilidade-lista {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .elegibilidade-lista li {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+    .elegibilidade-lista li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--laranja);
+      opacity: 0.7;
     }
 
     .resposta-features {
@@ -863,7 +938,10 @@
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">Faleck &amp; Associados</a>
-  <a href="#acionar" class="nav-cta">Acionar a Câmara</a>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicitação%20de%20Parceria%20-%20Câmara%20Zumbi&body=Registre%20sua%20solicitação%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="nav-cta-outline">Interessado em ser parceiro? Fale conosco</a>
+    <a href="#parceria" class="nav-cta">Acionar a Câmara</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -882,20 +960,20 @@
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-num">Desde 2011</div>
-      <div class="hero-stat-label">liderando resolução de disputas no Brasil</div>
+      <div class="hero-stat-num">+13 anos</div>
+      <div class="hero-stat-label">de experiência em mediação complexa</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-num">+100</div>
-      <div class="hero-stat-label">mediadores e negociadores de primeira linha</div>
+      <div class="hero-stat-label">mediadores especializados</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">1º</div>
-      <div class="hero-stat-label">escritório brasileiro especializado em resolução por acordo</div>
+      <div class="hero-stat-num">1ª</div>
+      <div class="hero-stat-label">câmara especializada em conflitos raciais no Brasil</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">Nacional &amp; Internacional</div>
-      <div class="hero-stat-label">disputas de todos os portes</div>
+      <div class="hero-stat-num">Até 80% mais rápido</div>
+      <div class="hero-stat-label">que a via judicial</div>
     </div>
   </div>
 </section>
@@ -907,7 +985,7 @@
       <div class="camara-text fade-up">
         <span class="section-tag">O que é a Câmara</span>
         <h2 class="section-title">Um espaço <em>dedicado</em> ao tratamento adequado de conflitos raciais</h2>
-        <p class="section-subtitle">Essas duas instituições se unem para criar a Câmara de Mediação Zumbi dos Palmares voltada à prevenção e resolução de conflitos de consumo com possíveis aspectos discriminatórios, com viés racial ou análogos.<br><br>A Câmara tem como objetivo dar um tratamento adequado aos conflitos consumeristas que envolvam aspectos discriminatórios, auxiliando as empresas a se posicionar na prevenção e no combate de condutas inadequadas — e os consumidores a terem um espaço adequado e respeitoso para encontrar a melhor solução para a situação vivenciada.</p>
+        <p class="section-subtitle">A Câmara tem como objetivo dar um tratamento adequado aos conflitos consumeristas que envolvam aspectos discriminatórios, auxiliando as empresas a se posicionar na prevenção e no combate de condutas inadequadas e os consumidores a terem um espaço adequado e respeitoso para encontrar a melhor solução para a situação vivenciada.</p>
       </div>
       <div class="fade-up">
         <div class="camara-features">
@@ -967,21 +1045,27 @@
   <div class="section-inner">
     <span class="section-tag">Quem Somos</span>
     <h2 class="section-title">Duas instituições, <em>uma missão</em></h2>
-    <p class="section-subtitle">A Câmara nasce da união entre uma referência nacional em igualdade racial e o primeiro escritório brasileiro especializado em resolução de disputas por acordo.</p>
+    <p class="section-subtitle">A Câmara nasce da união entre uma referência nacional em igualdade racial e o primeiro escritório brasileiro especializado em resolução de disputas especializado em resolução extrajudicial de conflitos.</p>
     <div class="quem-grid">
       <div class="quem-card fade-up">
-        <span class="quem-card-tag">Referência em Igualdade Racial</span>
-        <div class="quem-card-logo">
-          <span class="quem-card-logo-text">Instituto &amp; Universidade Zumbi dos Palmares</span>
+        <img src="faculdade-zumbi-dos-palmares.jpg" alt="Faculdade Zumbi dos Palmares" class="quem-card-img">
+        <div class="quem-card-body">
+          <span class="quem-card-tag">Referência em Igualdade Racial</span>
+          <div class="quem-card-logo">
+            <span class="quem-card-logo-text">Instituto &amp; Universidade Zumbi dos Palmares</span>
+          </div>
+          <p>Instituições de referência nacional na promoção da igualdade racial, na produção de conhecimento aplicado à temática antirracista e no desenvolvimento de políticas, programas e iniciativas de combate à discriminação.<br><br>Nos destacamos pela atuação acadêmica, comunitária e institucional voltada à inclusão, diversidade, justiça social e enfrentamento das desigualdades étnico-raciais.</p>
         </div>
-        <p>Instituições de referência nacional na promoção da igualdade racial, na produção de conhecimento aplicado à temática antirracista e no desenvolvimento de políticas, programas e iniciativas de combate à discriminação.<br><br>Destacam-se por atuação acadêmica, comunitária e institucional voltada à inclusão, diversidade, justiça social e enfrentamento das desigualdades étnico-raciais.</p>
       </div>
       <div class="quem-card fade-up">
-        <span class="quem-card-tag">Especialistas em Resolução de Disputas</span>
-        <div class="quem-card-logo">
-          <span class="quem-card-logo-text">Faleck &amp; Associados</span>
+        <img src="FALECKxtra35.jpg" alt="Faleck & Associados" class="quem-card-img">
+        <div class="quem-card-body">
+          <span class="quem-card-tag">Especialistas em Resolução de Disputas</span>
+          <div class="quem-card-logo">
+            <span class="quem-card-logo-text">Faleck &amp; Associados</span>
+          </div>
+          <p>Fundado em 2011, o escritório possui a missão de desenvolver no Brasil e no mundo os métodos consensuais de resolução de disputas com excelência técnica, impacto social e inovação institucional.<br><br>É o primeiro escritório brasileiro especializado em resolução extrajudicial de conflitos, com +100 mediadores de primeira linha, liderando o mercado em disputas nacionais e internacionais de todos os portes.</p>
         </div>
-        <p>Nasceu com a missão de desenvolver no Brasil e no mundo os métodos consensuais de resolução de disputas com excelência técnica, impacto social e inovação institucional.<br><br>É o primeiro escritório brasileiro especializado em resolução de disputas por acordo — com +100 mediadores de primeira linha, liderando o mercado desde 2011 em disputas nacionais e internacionais de todos os portes.</p>
       </div>
     </div>
   </div>
@@ -1054,11 +1138,11 @@
       <div class="steps-track">
         <div class="step">
           <div class="step-num">1</div>
-          <div class="step-title">Parceria da Empresa com a Câmara</div>
+          <div class="step-title">Solicitação da Parceria</div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
-          <div class="step-title">Triagem de casos com elementos raciais pelos canais de atendimento</div>
+          <div class="step-title">Triagem pelos Canais de Atendimento</div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
@@ -1147,10 +1231,20 @@
           <span>Alta Prioridade</span>
         </div>
         <h2>Precisa resolver um caso <em>agora</em>?</h2>
-        <p>Não é necessário ser empresa parceira para acionar a Câmara. Se você é consumidor ou empresa com um caso urgente que envolva aspectos raciais, nosso serviço de resposta rápida garante atenção imediata e prioritária — sem burocracia.</p>
+        <p>Ainda não é parceiro e possui um caso que não pode esperar? Se você é consumidor ou empresa com um caso urgente que envolva aspectos raciais, a ativação via Resposta Rápida garante atenção imediata e prioritária, sem burocracia.</p>
+        <div class="elegibilidade-box">
+          <div class="elegibilidade-header">
+            <span class="elegibilidade-icon">✓</span>
+            <strong>Sou elegível para este mecanismo?</strong>
+          </div>
+          <ul class="elegibilidade-lista">
+            <li>Primeiro contato com o programa e ainda não é empresa parceira</li>
+            <li>Busca por resolução rápida sem passar por processos formais de adesão</li>
+            <li>O caso envolve aspecto racial claro e risco de escalada ou dano reputacional</li>
+          </ul>
+        </div>
         <div class="hero-actions">
-          <a href="mailto:camara@faleck.com.br" class="btn-primary">Acionar a Câmara</a>
-          <a href="#parceria" class="btn-outline">Tornar-se Parceiro</a>
+          <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Resposta%20R%C3%A1pida%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20em%20at%C3%A9%201%20dia%20%C3%BAtil" class="btn-primary" target="_blank" rel="noopener">Acione o Resposta Rápida</a>
         </div>
       </div>
       <div class="resposta-features fade-up">
@@ -1207,7 +1301,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="footer-brand-logo">Faleck &amp; Associados</span>
-      <p>Câmara de Mediação Zumbi dos Palmares — uma parceria entre Faleck & Associados e o Instituto e Universidade Zumbi dos Palmares para a resolução de conflitos raciais de consumo.</p>
+      <p>Câmara de Mediação Zumbi dos Palmares, uma parceria entre Faleck & Associados e o Instituto e Universidade Zumbi dos Palmares para a resolução de conflitos raciais de consumo.</p>
     </div>
     <div>
       <h4>A Câmara</h4>
