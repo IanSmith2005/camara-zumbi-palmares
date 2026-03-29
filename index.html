@@ -63,8 +63,9 @@
     }
 
     .nav-cta {
-      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
-      color: var(--marrom);
+      background: transparent;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.3);
       font-family: 'Barlow', sans-serif;
       font-weight: 700;
       font-size: 13px;
@@ -73,9 +74,15 @@
       padding: 11px 26px;
       border-radius: 4px;
       text-decoration: none;
-      transition: opacity 0.2s, transform 0.15s;
+      transition: background 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
     }
-    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 0 20px rgba(212,175,55,0.5); }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    .nav-cta.scrolled {
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      color: var(--marrom);
+      border-color: transparent;
+    }
+    .nav-cta.scrolled:hover { box-shadow: 0 0 20px rgba(212,175,55,0.5); }
 
     .nav-cta-outline {
       color: rgba(255,255,255,0.75);
@@ -1450,6 +1457,18 @@
       }
     });
   });
+
+  // Gold nav button only after scrolling past hero
+  const navCta = document.querySelector('.nav-cta');
+  const hero = document.querySelector('.hero');
+  const onScroll = () => {
+    if (window.scrollY > hero.offsetHeight * 0.8) {
+      navCta.classList.add('scrolled');
+    } else {
+      navCta.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   // Open all mailto and external links in new tab
   document.querySelectorAll('a[href^="mailto:"], a[href^="http"]').forEach(link => {
