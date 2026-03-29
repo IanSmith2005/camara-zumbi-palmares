@@ -36,7 +36,7 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 18px 60px;
+      padding: 8px 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -47,13 +47,15 @@
     }
 
     .nav-logo {
-      font-family: 'Instrument Serif', serif;
-      font-weight: 400;
-      font-size: 1.15rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.88);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 64px;
+      width: auto;
+      mix-blend-mode: screen;
+      opacity: 0.9;
     }
 
     .nav-cta {
@@ -460,12 +462,12 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--laranja);
-      text-shadow: 0 0 12px rgba(212,175,55,0.5), 0 1px 2px rgba(180,140,20,0.3);
-      background: rgba(212,175,55,0.1);
-      border: 1px solid rgba(212,175,55,0.28);
-      padding: 5px 12px;
-      border-radius: 100px;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-left: 3px solid #D4AF37;
+      padding: 2px 0 2px 12px;
       margin-bottom: 16px;
     }
 
@@ -998,7 +1000,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#home" class="nav-logo">Faleck &amp; Associados</a>
+  <a href="#home" class="nav-logo"><img src="Iniviativa logo.png" alt="Iniciativa Empresarial pela Igualdade Racial"></a>
   <div style="display:flex; align-items:center; gap:12px;">
     <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicitação%20de%20Parceria%20-%20Câmara%20Zumbi&body=Registre%20sua%20solicitação%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="nav-cta-outline">Interessado em ser parceiro? Fale conosco</a>
     <a href="#parceria" class="nav-cta">Acionar a Câmara</a>
