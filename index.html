@@ -906,15 +906,18 @@
       border-bottom: 1px solid rgba(255,255,255,0.09);
     }
 
-    .footer-brand-logo {
-      font-family: 'Instrument Serif', serif;
-      font-weight: 400;
-      font-size: 1rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.82);
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 28px;
       margin-bottom: 20px;
-      display: block;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.75;
     }
     .footer-brand p {
       font-size: 0.855rem;
@@ -1381,7 +1384,10 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="footer-brand-logo">Faleck &amp; Associados</span>
+      <div class="footer-logos">
+        <img src="Iniviativa logo.png" alt="Iniciativa Empresarial pela Igualdade Racial" class="footer-logo">
+        <img src="Logo Faleck.jpg" alt="Faleck & Associados" class="footer-logo">
+      </div>
       <p>Câmara de Mediação Zumbi dos Palmares, uma parceria entre Faleck & Associados e o Instituto e Universidade Zumbi dos Palmares para a resolução de conflitos raciais de consumo.</p>
     </div>
     <div>
