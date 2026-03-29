@@ -950,9 +950,9 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
-      nav { padding: 16px 24px; }
+      nav { padding: 8px 24px; }
       section { padding: 80px 24px; }
-      .hero { padding: 120px 24px 200px; }
+      .hero { padding: 120px 24px 0; height: 100vh; min-height: 100vh; }
 
       .camara-grid,
       .quem-grid,
@@ -978,11 +978,17 @@
       .step-title { max-width: none; padding-top: 14px; }
 
       .hero-stats {
-        position: static;
-        margin-top: 60px;
-        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
-      .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .hero-stat {
+        flex: 1 1 50%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
 
       .fluxo-intro { position: static; }
       footer { padding: 56px 24px 36px; }
@@ -992,7 +998,12 @@
     @media (max-width: 580px) {
       .beneficios-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.1rem; }
+      .hero { padding: 100px 24px 0; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-sub { font-size: 0.9rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .hero-stats { flex-direction: column; }
+      .hero-stat { flex: 1 1 100%; }
     }
   </style>
 </head>
