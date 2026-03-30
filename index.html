@@ -569,6 +569,31 @@
     .como-participar { background: var(--offwhite); }
 
     .steps-container { margin-top: 64px; }
+    .parceria-cta { margin-top: 56px; }
+    .parceria-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      background: rgba(212,175,55,0.06);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius);
+      padding: 28px 36px;
+    }
+    .parceria-cta-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--texto);
+      margin: 0 0 4px;
+    }
+    .parceria-cta-sub {
+      font-size: 0.85rem;
+      color: rgba(44,26,14,0.5);
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .parceria-cta-inner { flex-direction: column; align-items: flex-start; }
+    }
 
     .steps-track {
       display: flex;
@@ -1041,7 +1066,6 @@
 <nav>
   <a href="#home" class="nav-logo"><img src="Iniviativa logo.png" alt="Iniciativa Empresarial pela Igualdade Racial"></a>
   <div style="display:flex; align-items:center; gap:12px;">
-    <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicitação%20de%20Parceria%20-%20Câmara%20Zumbi&body=Registre%20sua%20solicitação%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="nav-cta-outline">Interessado em ser parceiro? Fale conosco</a>
     <a href="#parceria" class="nav-cta">Acionar a Câmara</a>
   </div>
 </nav>
@@ -1263,6 +1287,15 @@
           <div class="step-num">6</div>
           <div class="step-title">Relatório de resultados dos casos encaminhados</div>
         </div>
+      </div>
+    </div>
+    <div class="parceria-cta fade-up">
+      <div class="parceria-cta-inner">
+        <div>
+          <p class="parceria-cta-label">Pronto para começar?</p>
+          <p class="parceria-cta-sub">Nossa equipe retorna em até 7 dias úteis.</p>
+        </div>
+        <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="btn-primary">Interessado em ser parceiro? Fale conosco</a>
       </div>
     </div>
   </div>
