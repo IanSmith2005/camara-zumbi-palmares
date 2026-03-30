@@ -84,6 +84,24 @@
     }
     .nav-cta.scrolled:hover { box-shadow: 0 0 20px rgba(212,175,55,0.5); }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-link {
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: rgba(255,255,255,0.95); }
+    @media (max-width: 960px) { .nav-links { display: none; } }
+
     .nav-cta-outline {
       color: rgba(255,255,255,0.75);
       font-family: 'Barlow', sans-serif;
@@ -1180,6 +1198,12 @@
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo"><img src="Iniviativa logo.png" alt="Iniciativa Empresarial pela Igualdade Racial"></a>
+  <div class="nav-links">
+    <a href="#camara" class="nav-link">Sobre</a>
+    <a href="#quem-somos" class="nav-link">Quem Somos</a>
+    <a href="#beneficios" class="nav-link">Benefícios</a>
+    <a href="#acionar" class="nav-link">Resposta Rápida</a>
+  </div>
   <div style="display:flex; align-items:center; gap:12px;">
     <a href="#parceria" class="nav-cta">Acionar a Câmara</a>
   </div>
