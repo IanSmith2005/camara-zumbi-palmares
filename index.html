@@ -879,6 +879,77 @@
     }
     .cta-inner { max-width: 660px; margin: 0 auto; }
 
+    .contato { background: var(--marrom); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contato-info .section-title { color: #fff; }
+    .contato-info .section-subtitle { color: rgba(255,255,255,0.6); }
+    .contato-details { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+    .contato-detail { display: flex; flex-direction: column; gap: 3px; }
+    .contato-detail-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .contato-detail-value {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .contato-detail-value a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+    .contato-detail-value a:hover { color: var(--laranja); }
+
+    .contato-form-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .contato-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 11px 14px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: rgba(212,175,55,0.5); }
+    .form-group select option { background: var(--marrom); color: #fff; }
+    .form-group textarea { resize: vertical; }
+
+    @media (max-width: 960px) {
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
     .cta-final h2 {
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
@@ -1295,7 +1366,7 @@
           <p class="parceria-cta-label">Pronto para começar?</p>
           <p class="parceria-cta-sub">Nossa equipe retorna em até 7 dias úteis.</p>
         </div>
-        <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="btn-primary">Interessado em ser parceiro? Fale conosco</a>
+        <a href="#contato" class="btn-primary" data-servico="Parceria">Interessado em ser parceiro? Fale conosco</a>
       </div>
     </div>
   </div>
@@ -1380,7 +1451,7 @@
           </ul>
         </div>
         <div class="hero-actions">
-          <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Resposta%20R%C3%A1pida%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20em%20at%C3%A9%201%20dia%20%C3%BAtil" class="btn-primary" target="_blank" rel="noopener">Acione o Resposta Rápida</a>
+          <a href="#contato" class="btn-primary" data-servico="Caso Urgente">Acione o Resposta Rápida</a>
         </div>
       </div>
       <div class="resposta-features fade-up">
@@ -1425,8 +1496,71 @@
       <h2>Torne sua empresa <em>referência</em> no tratamento de conflitos raciais</h2>
       <p>Junte-se à Câmara de Mediação Zumbi dos Palmares e demonstre o compromisso da sua empresa com a equidade racial, a boa-fé e a responsabilidade social.</p>
       <div class="cta-actions">
-        <a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias" class="btn-primary">Falar com a Equipe</a>
+        <a href="#contato" class="btn-primary">Falar com a Equipe</a>
         <a href="https://faleck.com.br" class="btn-dark" target="_blank">Conhecer a Iniciativa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="section-inner">
+    <div class="contato-grid">
+      <div class="contato-info fade-up">
+        <span class="section-tag">Contato</span>
+        <h2 class="section-title">Fale com a <em>nossa equipe</em></h2>
+        <p class="section-subtitle">Preencha o formulário e entraremos em contato em até 7 dias úteis.</p>
+        <div class="contato-details">
+          <div class="contato-detail">
+            <span class="contato-detail-label">Email</span>
+            <span class="contato-detail-value">elisa.lucena@faleck.com.br</span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Empresa</span>
+            <span class="contato-detail-value">Faleck &amp; Associados</span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Site</span>
+            <span class="contato-detail-value"><a href="https://faleck.com.br" target="_blank">faleck.com.br</a></span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Iniciativa</span>
+            <span class="contato-detail-value"><a href="https://iniciativaempresarial.com.br" target="_blank">iniciativaempresarial.com.br</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="contato-form-wrap fade-up">
+        <form class="contato-form" id="contato-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="f-empresa">Empresa</label>
+              <input type="text" id="f-empresa" placeholder="Nome da empresa">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="f-servico">Tipo de solicitação</label>
+            <select id="f-servico">
+              <option value="Parceria">Tornar-se parceiro</option>
+              <option value="Caso Urgente">Caso urgente — Resposta Rápida</option>
+              <option value="Informações">Informações gerais</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-mensagem">Mensagem</label>
+            <textarea id="f-mensagem" rows="4" placeholder="Descreva brevemente o seu caso ou solicitação"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; cursor:pointer; border:none; font-size:13px;">Enviar Mensagem</button>
+        </form>
       </div>
     </div>
   </div>
@@ -1456,6 +1590,7 @@
         <li><a href="#parceria">Como Participar</a></li>
         <li><a href="#fluxo">Fluxo de Trabalho</a></li>
         <li><a href="#acionar">Resposta Rápida</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
     <div>
@@ -1502,6 +1637,30 @@
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Pre-select service on contact form when coming from a specific button
+  document.querySelectorAll('a[data-servico]').forEach(link => {
+    link.addEventListener('click', function() {
+      const servico = this.getAttribute('data-servico');
+      setTimeout(() => {
+        const sel = document.getElementById('f-servico');
+        if (sel) sel.value = servico;
+      }, 400);
+    });
+  });
+
+  // Form submit — compose mailto
+  document.getElementById('contato-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('f-nome').value;
+    const empresa = document.getElementById('f-empresa').value;
+    const email = document.getElementById('f-email').value;
+    const servico = document.getElementById('f-servico').value;
+    const mensagem = document.getElementById('f-mensagem').value;
+    const subject = encodeURIComponent(`${servico} — Câmara Zumbi dos Palmares`);
+    const body = encodeURIComponent(`Nome: ${nome}\nEmpresa: ${empresa}\nEmail: ${email}\nTipo: ${servico}\n\nMensagem:\n${mensagem}`);
+    window.open(`mailto:elisa.lucena@faleck.com.br?subject=${subject}&body=${body}`, '_blank');
+  });
 
   // Open all mailto and external links in new tab
   document.querySelectorAll('a[href^="mailto:"], a[href^="http"]').forEach(link => {
