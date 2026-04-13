@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câmara de Mediação Zumbi dos Palmares — Faleck & Associados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --marrom: #2C1A0E;
+      --laranja: #D4AF37;
+      --teal: #4A90A4;
+      --vermelho: #C0392B;
+      --offwhite: #F0EDE9;
+      --cinza-claro: #E8E4E0;
+      --texto: #1A0F07;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: #D4AF37 #2C1A0E; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #2C1A0E; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #f5e27a, #C4922A, #b8860b); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #f5e27a, #D4AF37, #C4922A); }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      background: var(--offwhite);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 8px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(44,26,14,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,175,55,0.25);
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 76px;
+      width: auto;
+      mix-blend-mode: screen;
+      opacity: 0.9;
+    }
+
+    .nav-cta {
+      background: transparent;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 11px 26px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    .nav-cta.scrolled {
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      color: var(--marrom);
+      border-color: transparent;
+    }
+    .nav-cta.scrolled:hover { box-shadow: 0 0 20px rgba(212,175,55,0.5); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .nav-link {
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: rgba(255,255,255,0.95); }
+    @media (max-width: 960px) { .nav-links { display: none; } }
+
+    .nav-cta-outline {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 11px 20px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-cta-outline:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      min-height: calc(var(--vh, 1vh) * 100);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      padding: 100px 60px 70px;
+      background: var(--marrom);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('rock-staar-NzIV4vOBA7s-unsplash.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.13;
+      z-index: 0;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: radial-gradient(ellipse 55% 80% at 22% 48%, rgba(212,175,55,0.09) 0%, transparent 80%);
+      pointer-events: none;
+    }
+
+
+    .hero-deco {
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.08);
+      pointer-events: none;
+    }
+
+    .hero-deco::after {
+      content: '';
+      position: absolute;
+      inset: 60px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.05);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 740px;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      border-left: 3px solid var(--laranja);
+      padding: 2px 0 2px 14px;
+      margin-bottom: 16px;
+    }
+
+    .hero-eyebrow span {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .hero-eyebrow::before { display: none; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.35); }
+    }
+
+    .hero h1 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.6vw, 1.12rem);
+      line-height: 1.72;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      color: var(--marrom);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 15px 34px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 0 24px rgba(212,175,55,0.5); }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 15px 34px;
+      border: 2px solid rgba(255,255,255,0.38);
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); }
+
+    .hero-stats {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      display: flex;
+      background: rgba(0,0,0,0.28);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      z-index: 2;
+    }
+
+    .hero-stat {
+      flex: 1;
+      padding: 18px 28px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .hero-stat:last-child { border-right: none; }
+
+    .hero-stat-num {
+      font-weight: 700;
+      font-size: 1.25rem;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat-label {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.4;
+    }
+
+    /* ─── SHARED ─── */
+    section { padding: 100px 60px; }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 14px;
+      position: relative;
+      padding-left: 20px;
+    }
+    .section-tag::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 12px; height: 2px;
+      background: var(--laranja);
+    }
+
+    .section-tag--centered {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+    }
+    .section-tag--centered::before {
+      display: none;
+    }
+    .section-tag--centered::after {
+      content: '';
+      display: inline-block;
+      width: 12px; height: 2px;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      vertical-align: middle;
+      margin-left: 10px;
+      position: relative;
+      top: -1px;
+    }
+    .section-tag--centered .tag-dash-before {
+      display: inline-block;
+      width: 12px; height: 2px;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      vertical-align: middle;
+      margin-right: 10px;
+      position: relative;
+      top: -1px;
+    }
+
+    .section-title {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: clamp(2.2rem, 3.5vw, 3rem);
+      line-height: 1.12;
+      color: var(--marrom);
+      margin-bottom: 16px;
+    }
+    .section-title em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: #5a4030;
+      max-width: 640px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── O QUE É A CÂMARA ─── */
+    .camara { background: var(--offwhite); }
+
+    .camara-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: start;
+    }
+
+    .camara-text .section-subtitle { margin-bottom: 24px; }
+    .btn-regulamento {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--marrom);
+      border: 1.5px solid var(--marrom);
+      padding: 11px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-regulamento:hover {
+      background: var(--marrom);
+      color: var(--offwhite);
+    }
+
+    .camara-features {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4px;
+    }
+
+    .camara-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(44,26,14,0.09);
+    }
+    .camara-feature:first-child { border-top: 1px solid rgba(44,26,14,0.09); }
+
+    .camara-feature-icon {
+      width: 42px; height: 42px;
+      background: rgba(212,175,55,0.1);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .camara-feature-icon svg {
+      width: 19px; height: 19px;
+      stroke: var(--laranja);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .camara-feature-text strong {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--marrom);
+      margin-bottom: 4px;
+    }
+    .camara-feature-text span {
+      font-size: 0.8rem;
+      color: #7a5a40;
+      line-height: 1.55;
+    }
+
+    /* ─── QUEM SOMOS ─── */
+    .quem-somos { background: var(--marrom); }
+
+    .quem-somos .section-title { color: #fff; }
+    .quem-somos .section-subtitle { color: rgba(255,255,255,0.6); }
+
+    .quem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 52px;
+    }
+
+    .quem-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .quem-card-img {
+      width: 100%;
+      display: block;
+    }
+
+    .quem-card-body {
+      padding: 32px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      flex: 1;
+    }
+    .quem-card-body p { flex: 1; }
+    .quem-card { display: flex; flex-direction: column; }
+    .quem-card-link {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: opacity 0.2s;
+    }
+    .quem-card-link:hover { opacity: 0.75; }
+
+    .quem-card:hover {
+      border-color: rgba(212,175,55,0.35);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .quem-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-left: 3px solid #D4AF37;
+      padding: 2px 0 2px 12px;
+      margin-bottom: 16px;
+    }
+
+    .quem-card-logo {
+      margin-bottom: 20px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .quem-card-logo img {
+      height: 32px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.88;
+    }
+    .quem-card-logo-text {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.88);
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+    }
+
+    .quem-card p {
+      font-size: 0.91rem;
+      line-height: 1.78;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ─── BENEFÍCIOS ─── */
+    .beneficios { background: var(--cinza-claro); }
+
+    .beneficios-header { margin-bottom: 52px; }
+
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .beneficio-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid rgba(44,26,14,0.07);
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+    .beneficio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 44px rgba(44,26,14,0.09);
+    }
+
+    .beneficio-icon {
+      width: 50px; height: 50px;
+      background: rgba(212,175,55,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .beneficio-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--laranja);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .beneficio-card h4 {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--marrom);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .beneficio-card p {
+      font-size: 0.865rem;
+      line-height: 1.68;
+      color: #7a5a40;
+    }
+
+    /* ─── COMO PARTICIPAR ─── */
+    .como-participar { background: var(--offwhite); }
+
+    .steps-container { margin-top: 64px; }
+    .parceria-cta { margin-top: 56px; }
+    .parceria-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      background: rgba(212,175,55,0.06);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius);
+      padding: 28px 36px;
+    }
+    .parceria-cta-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--texto);
+      margin: 0 0 4px;
+    }
+    .parceria-cta-sub {
+      font-size: 0.85rem;
+      color: rgba(44,26,14,0.5);
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .parceria-cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    .steps-track {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    .steps-track::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 27px; right: 27px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--laranja) 0%, rgba(212,175,55,0.18) 100%);
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      position: relative;
+      padding: 0 10px;
+    }
+
+    .step-num {
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      background: var(--marrom);
+      color: var(--laranja);
+      text-shadow: 0 0 14px rgba(245,226,122,0.7), 0 0 4px rgba(212,175,55,0.5);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+      border: 2.5px solid #D4AF37;
+      box-shadow: 0 0 12px rgba(212,175,55,0.25);
+      transition: background 0.2s, color 0.2s;
+    }
+    .step:hover .step-num { background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%); color: var(--marrom); text-shadow: none; box-shadow: 0 0 18px rgba(212,175,55,0.4); border: none; }
+
+    .step-title {
+      font-weight: 600;
+      font-size: 0.825rem;
+      color: var(--marrom);
+      line-height: 1.45;
+      max-width: 130px;
+    }
+
+    /* ─── CAPACITAÇÃO ─── */
+    .capacitacao { background: var(--marrom); }
+    .capacitacao .section-tag { color: var(--laranja); border-color: var(--laranja); }
+    .capacitacao .section-title { color: #fff; }
+    .capacitacao .section-subtitle { color: rgba(255,255,255,0.62); }
+
+    .capacitacao-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 52px;
+    }
+
+    .capacitacao-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-top: 3px solid #C4922A;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .capacitacao-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(212,175,55,0.35);
+      border-top-color: #D4AF37;
+    }
+
+    .capacitacao-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .capacitacao-card h3 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+      line-height: 1.35;
+    }
+
+    .capacitacao-card p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+
+    /* ─── ETAPAS DA MEDIAÇÃO ─── */
+    .fluxo { background: var(--offwhite); }
+
+    .fluxo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: start;
+      margin-top: 12px;
+    }
+
+    .fluxo-intro { position: sticky; top: 100px; }
+
+    .fluxo-steps { display: flex; flex-direction: column; }
+
+    .fluxo-step {
+      display: flex;
+      gap: 22px;
+      padding: 22px 0;
+      position: relative;
+    }
+    .fluxo-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 62px;
+      bottom: -22px;
+      width: 2px;
+      background: rgba(44,26,14,0.1);
+    }
+
+    .fluxo-step-num {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--marrom);
+      color: var(--laranja);
+      text-shadow: 0 0 14px rgba(245,226,122,0.7), 0 0 4px rgba(212,175,55,0.5);
+      font-weight: 700;
+      font-size: 0.825rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 2px #C4922A, 0 0 12px rgba(212,175,55,0.25);
+    }
+
+    .fluxo-step-content { padding-top: 6px; }
+    .fluxo-step-content h4 {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--marrom);
+      margin-bottom: 5px;
+    }
+    .fluxo-step-content p {
+      font-size: 0.865rem;
+      line-height: 1.65;
+      color: #7a5a40;
+    }
+
+    /* ─── RESPOSTA RÁPIDA ─── */
+    .resposta-rapida {
+      background: linear-gradient(135deg, #180800 0%, #2C1A0E 45%, #3a1e0a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .resposta-rapida::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 75% at 82% 50%, rgba(212,175,55,0.08) 0%, transparent 60%);
+    }
+
+    .resposta-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    .resposta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(192,57,43,0.18);
+      border: 1px solid rgba(192,57,43,0.38);
+      border-radius: 100px;
+      padding: 7px 16px;
+      margin-bottom: 24px;
+    }
+    .resposta-badge span {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #e74c3c;
+    }
+    .resposta-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #e74c3c;
+      animation: pulse 1.4s infinite;
+    }
+
+    .resposta-rapida h2 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      line-height: 1.18;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .resposta-rapida h2 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .resposta-rapida > .section-inner > .resposta-inner > div > p {
+      font-size: 1rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 34px;
+    }
+
+    .elegibilidade-box {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 34px;
+    }
+    .elegibilidade-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .elegibilidade-icon {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--laranja);
+      color: var(--marrom);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .elegibilidade-header strong {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .elegibilidade-lista {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .elegibilidade-lista li {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+    .elegibilidade-lista li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--laranja);
+      opacity: 0.7;
+    }
+
+    .resposta-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 8px 0;
+    }
+
+    .resposta-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .resposta-feature:last-child { border-bottom: none; }
+
+    .resposta-feature-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--laranja);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .resposta-feature-text {
+      font-size: 0.875rem;
+      line-height: 1.62;
+      color: rgba(255,255,255,0.7);
+    }
+    .resposta-feature-text strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.92rem;
+    }
+
+    /* ─── CTA FINAL ─── */
+    .cta-final {
+      background: var(--offwhite);
+      text-align: center;
+    }
+    .cta-inner { max-width: 660px; margin: 0 auto; }
+    .cta-icon-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .cta-icon-btn:hover { transform: translateY(-4px); }
+    .cta-icon-img {
+      width: 80px; height: 80px;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%) invert(72%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(95%);
+      transition: filter 0.2s;
+    }
+    .cta-icon-btn:hover .cta-icon-img { filter: brightness(0) saturate(100%) invert(85%) sepia(80%) saturate(600%) hue-rotate(5deg) brightness(105%); }
+    .cta-icon-btn span {
+      font-family: 'Barlow', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--texto);
+    }
+
+    .contato { background: var(--marrom); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contato-info .section-title { color: #fff; }
+    .contato-info .section-subtitle { color: rgba(255,255,255,0.6); }
+    .contato-details { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+    .contato-detail { display: flex; flex-direction: column; gap: 3px; }
+    .contato-detail-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .contato-detail-value {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .contato-detail-value a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+    .contato-detail-value a:hover { color: var(--laranja); }
+
+    .contato-form-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .contato-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 11px 14px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: rgba(212,175,55,0.5); }
+    .form-group select option { background: var(--marrom); color: #fff; }
+    .form-group textarea { resize: vertical; }
+
+    @media (max-width: 960px) {
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .cta-final h2 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      line-height: 1.18;
+      color: var(--marrom);
+      margin-bottom: 16px;
+    }
+    .cta-final h2 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      background: linear-gradient(135deg, #f5e27a 0%, #C4922A 35%, #D4AF37 55%, #f5e27a 75%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-final p {
+      font-size: 1.02rem;
+      line-height: 1.72;
+      color: #5a4030;
+      margin-bottom: 40px;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-dark {
+      background: var(--marrom);
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 15px 34px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-dark:hover { background: #1a0a02; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(44,26,14,0.18); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--marrom);
+      padding: 64px 60px 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      height: 1.1rem;
+      width: auto;
+      opacity: 0.75;
+    }
+    .footer-faleck-text {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .footer-brand p {
+      font-size: 0.855rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.48);
+      max-width: 290px;
+    }
+
+    footer h4 {
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.36);
+      margin-bottom: 16px;
+    }
+
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    footer ul li a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer ul li a:hover { color: var(--laranja); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 30px auto 0;
+    }
+    .footer-bottom span {
+      font-size: 0.775rem;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav { padding: 8px 24px; }
+      section { padding: 80px 24px; }
+      .hero {
+        padding: 120px 24px 140px;
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: calc(var(--vh, 1vh) * 100);
+      }
+
+      .camara-grid,
+      .quem-grid,
+      .fluxo-grid,
+      .capacitacao-grid,
+      .resposta-inner { grid-template-columns: 1fr; gap: 44px; }
+
+      .beneficios-grid { grid-template-columns: 1fr 1fr; }
+
+      .steps-track {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+      .steps-track::before { display: none; }
+      .step {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 24px;
+      }
+      .step-num { margin-bottom: 0; flex-shrink: 0; }
+      .step-title { max-width: none; padding-top: 14px; }
+
+      .hero-stats {
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .hero-stat {
+        flex: 1 1 33%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .fluxo-intro { position: static; }
+      footer { padding: 56px 24px 36px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 580px) {
+      .beneficios-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero {
+        padding: 100px 24px 0;
+        height: calc(var(--vh, 1vh) * 100);
+        justify-content: flex-start;
+      }
+      .hero-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+      }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-sub { font-size: 0.9rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .hero-stats {
+        position: static;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-left: -24px;
+        margin-right: -24px;
+      }
+      .hero-stat {
+        flex: 1 1 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding: 10px 12px;
+      }
+      .hero-stat-num { font-size: 1rem; }
+      .hero-stat-label { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo"><img src="NewLogo.png" alt="Câmara de Mediação Zumbi dos Palmares"></a>
+  <div class="nav-links">
+    <a href="#camara" class="nav-link">Sobre</a>
+    <a href="#quem-somos" class="nav-link">Quem Somos</a>
+    <a href="#beneficios" class="nav-link">Benefícios</a>
+    <a href="#acionar" class="nav-link">Resposta Rápida</a>
+  </div>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <a href="#contato" class="nav-cta">Acionar a Câmara</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-deco"></div>
+  <div class="hero-content">
+    <h1>Resolução de conflitos <em>raciais</em> com excelência e respeito</h1>
+    <p class="hero-sub">Uma iniciativa da Universidade Zumbi dos Palmares com apoio técnico da Faleck & Associados para prevenir e resolver conflitos de consumo com possíveis aspectos discriminatórios, com viés racial ou análogos.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-primary">Seja Parceiro</a>
+      <a href="#acionar" class="btn-outline">Resposta Rápida</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">+13 anos</div>
+      <div class="hero-stat-label">de experiência em mediação complexa</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">+100</div>
+      <div class="hero-stat-label">mediadores especializados</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">1ª</div>
+      <div class="hero-stat-label">câmara especializada em conflitos raciais no Brasil</div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE É A CÂMARA -->
+<section class="camara" id="camara">
+  <div class="section-inner">
+    <div class="camara-grid">
+      <div class="camara-text fade-up">
+        <span class="section-tag">O que é a Câmara</span>
+        <h2 class="section-title">Um espaço <em>dedicado</em> ao tratamento adequado de conflitos raciais</h2>
+        <p class="section-subtitle">A Câmara tem como objetivo dar um tratamento adequado aos conflitos consumeristas que envolvam aspectos discriminatórios, auxiliando as empresas a se posicionar na prevenção e no combate de condutas inadequadas e os consumidores a terem um espaço adequado e respeitoso para encontrar a melhor solução para a situação vivenciada.</p>
+        <a href="#" class="btn-regulamento">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Leia o Regulamento da Câmara
+        </a>
+      </div>
+      <div class="fade-up">
+        <div class="camara-features">
+          <div class="camara-feature">
+            <div class="camara-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="camara-feature-text">
+              <strong>Mediadores de Primeira Linha</strong>
+              <span>Treinamento nas melhores técnicas da Escola de Harvard em negociação, mediação e letramento racial.</span>
+            </div>
+          </div>
+          <div class="camara-feature">
+            <div class="camara-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <div class="camara-feature-text">
+              <strong>Protocolo de Triagem</strong>
+              <span>Identificação e seleção criteriosa dos casos elegíveis à mediação com elementos raciais.</span>
+            </div>
+          </div>
+          <div class="camara-feature">
+            <div class="camara-feature-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <div class="camara-feature-text">
+              <strong>Regimento Sensível à Temática Racial</strong>
+              <span>Regimento e protocolos desenvolvidos com sensibilidade às questões e vieses raciais.</span>
+            </div>
+          </div>
+          <div class="camara-feature">
+            <div class="camara-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="camara-feature-text">
+              <strong>Mediação Multipartes</strong>
+              <span>Para casos de repercussão envolvendo dano moral coletivo e necessidade de ajustamento de conduta.</span>
+            </div>
+          </div>
+          <div class="camara-feature">
+            <div class="camara-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="camara-feature-text">
+              <strong>Protocolo Consumerista</strong>
+              <span>Processo estruturado com foco específico em casos consumeristas com aspectos discriminatórios.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section class="quem-somos" id="quem-somos">
+  <div class="section-inner">
+    <span class="section-tag">Quem Somos</span>
+    <h2 class="section-title">Duas instituições, <em>uma missão</em></h2>
+    <p class="section-subtitle">A Câmara nasce da união entre uma referência nacional em igualdade racial e o primeiro escritório brasileiro especializado em resolução de disputas especializado em resolução extrajudicial de conflitos.</p>
+    <div class="quem-grid">
+      <div class="quem-card fade-up">
+        <img src="faculdade-zumbi-dos-palmares.jpg" alt="Instituto e Universidade Zumbi dos Palmares" class="quem-card-img">
+        <div class="quem-card-body">
+          <span class="quem-card-tag">Referência em Igualdade Racial</span>
+          <div class="quem-card-logo">
+            <span class="quem-card-logo-text">Instituto &amp; Universidade Zumbi dos Palmares</span>
+          </div>
+          <p>Instituições de referência nacional na promoção da igualdade racial, na produção de conhecimento aplicado à temática antirracista e no desenvolvimento de políticas, programas e iniciativas de combate à discriminação.<br><br>Nos destacamos pela atuação acadêmica, comunitária e institucional voltada à inclusão, diversidade, justiça social e enfrentamento das desigualdades étnico-raciais.</p>
+          <a href="https://zumbidospalmares.edu.br/" class="quem-card-link" target="_blank">Visitar site →</a>
+        </div>
+      </div>
+      <div class="quem-card fade-up">
+        <img src="Faleck_Picture_2.jpg" alt="Faleck & Associados" class="quem-card-img">
+        <div class="quem-card-body">
+          <span class="quem-card-tag">Especialistas em Resolução de Disputas</span>
+          <div class="quem-card-logo">
+            <span class="quem-card-logo-text">Faleck &amp; Associados</span>
+          </div>
+          <p>Fundado em 2011, o escritório possui a missão de desenvolver no Brasil e no mundo os métodos consensuais de resolução de disputas com excelência técnica, impacto social e inovação institucional.<br><br>É o primeiro escritório brasileiro especializado em resolução extrajudicial de conflitos, com +100 mediadores de primeira linha, liderando o mercado em disputas nacionais e internacionais de todos os portes.</p>
+          <a href="https://faleck.com.br" class="quem-card-link" target="_blank">Visitar site →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="beneficios" id="beneficios">
+  <div class="section-inner">
+    <div class="beneficios-header fade-up">
+      <span class="section-tag">Benefícios</span>
+      <h2 class="section-title">Por que escolher a <em>Câmara</em></h2>
+      <p class="section-subtitle">Vantagens concretas tanto para empresas quanto para consumidores que buscam uma resolução justa, eficiente e respeitosa.</p>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <h4>Confidencialidade</h4>
+        <p>Todo o processo é estritamente sigiloso. As informações trocadas não podem ser utilizadas em processos judiciais, garantindo segurança a todas as partes.</p>
+      </div>
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h4>Especialização</h4>
+        <p>Mediadores com treinamento em letramento racial e nas melhores técnicas da Escola de Harvard, garantindo condução tecnicamente qualificada.</p>
+      </div>
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h4>Eficiência</h4>
+        <p>Resolução mais rápida e menos custosa do que o processo judicial tradicional, com resultados concretos e acordos sustentáveis para ambas as partes.</p>
+      </div>
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Gerenciamento de Responsabilidade Jurídica</h4>
+        <p>Reduz o risco de condenações judiciais e mitiga a responsabilidade legal da empresa ao tratar conflitos de forma proativa e estruturada.</p>
+      </div>
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h4>Prevenção de Exposição Negativa</h4>
+        <p>Resolve conflitos antes que se tornem crises públicas, protegendo a reputação da empresa e evitando exposição midiática negativa.</p>
+      </div>
+      <div class="beneficio-card fade-up">
+        <div class="beneficio-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h4>Demonstração de Diligência e Boa-Fé</h4>
+        <p>Sinaliza ao mercado, consumidores e autoridades que a empresa age com responsabilidade e comprometimento frente a conflitos raciais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPACITAÇÃO -->
+<section class="capacitacao" id="capacitacao">
+  <div class="section-inner">
+    <div class="fade-up">
+      <span class="section-tag">Capacitação</span>
+      <h2 class="section-title">Outras Iniciativas de <em>Prevenção</em></h2>
+      <p class="section-subtitle">A Câmara oferece para empresas parceiras treinamentos especializados desenvolvidos pela Universidade Zumbi dos Palmares.</p>
+    </div>
+    <div class="capacitacao-grid fade-up">
+      <div class="capacitacao-card">
+        <span class="capacitacao-label">Treinamento I</span>
+        <h3>Letramento Racial e Antirracismo no Atendimento ao Cliente</h3>
+        <p>Capacitação voltada para equipes de atendimento ao cliente, vendedores, caixas, seguranças, SAC e canais de relacionamento, promovendo práticas antidiscriminatórias no contato direto com o consumidor.</p>
+      </div>
+      <div class="capacitacao-card">
+        <span class="capacitacao-label">Treinamento II</span>
+        <h3>Implementação do Protocolo Antirracista: Aspectos Legais e Operacionais</h3>
+        <p>Treinamento prático sobre a criação e implementação de protocolos internos antirracistas, adequados à lei nº 18.427/2026, abordando o enquadramento jurídico e os processos operacionais necessários.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPAS DA MEDIAÇÃO -->
+<section class="fluxo" id="fluxo">
+  <div class="section-inner">
+    <div class="fluxo-grid">
+      <div class="fluxo-intro fade-up">
+        <span class="section-tag">Etapas da Mediação</span>
+        <h2 class="section-title">Como os casos são <em>tratados</em> pela Câmara</h2>
+        <p class="section-subtitle">Cada caso recebido passa por um protocolo rigoroso, garantindo triagem adequada, engajamento respeitoso das partes e uma resolução justa.</p>
+      </div>
+      <div class="fluxo-steps fade-up">
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">1</div>
+          <div class="fluxo-step-content">
+            <h4>Recebimento do Caso</h4>
+            <p>O caso é recebido pela secretaria da Câmara, que registra todas as informações iniciais e organiza a documentação necessária.</p>
+          </div>
+        </div>
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">2</div>
+          <div class="fluxo-step-content">
+            <h4>Triagem do Caso</h4>
+            <p>Análise criteriosa para verificar a elegibilidade do caso, identificando a presença de elementos raciais e a adequação à mediação.</p>
+          </div>
+        </div>
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">3</div>
+          <div class="fluxo-step-content">
+            <h4>Engajamento das Partes</h4>
+            <p>O mediador entra em contato com todas as partes envolvidas, apresentando o processo e garantindo o engajamento voluntário e informado.</p>
+          </div>
+        </div>
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">4</div>
+          <div class="fluxo-step-content">
+            <h4>Mediação</h4>
+            <p>Realização das sessões de mediação com protocolo sensível às questões raciais, conduzidas por mediadores especializados.</p>
+          </div>
+        </div>
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">5</div>
+          <div class="fluxo-step-content">
+            <h4>Acordo ou Arquivamento</h4>
+            <p>Formalização do acordo alcançado entre as partes, ou arquivamento do caso com registro detalhado do processo e dos resultados.</p>
+          </div>
+        </div>
+        <div class="fluxo-step">
+          <div class="fluxo-step-num">6</div>
+          <div class="fluxo-step-content">
+            <h4>Relatório de Resultados</h4>
+            <p>Emissão de relatório completo dos casos encaminhados pela empresa, com indicadores de desempenho e recomendações de melhoria.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESPOSTA RÁPIDA -->
+<section class="resposta-rapida" id="acionar">
+  <div class="section-inner">
+    <div class="resposta-inner">
+      <div class="fade-up">
+        <div class="resposta-badge">
+          <span>Alta Prioridade</span>
+        </div>
+        <h2>Precisa resolver um caso <em>agora</em>?</h2>
+        <p>Possui um caso que não pode esperar? Se você é uma empresa ou consumidor de empresa conveniada com um caso urgente que envolva aspectos raciais, a ativação via Resposta Rápida garante atenção imediata e prioritária, sem burocracia.</p>
+        <div class="elegibilidade-box">
+          <div class="elegibilidade-header">
+            <span class="elegibilidade-icon">✓</span>
+            <strong>Sou elegível para este mecanismo?</strong>
+          </div>
+          <ul class="elegibilidade-lista">
+            <li>Primeiro contato com o programa</li>
+            <li>Empresa / Consumidor de empresa parceira</li>
+            <li>O caso envolve aspecto racial claro e demanda resposta rápida</li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+          <a href="#contato" class="btn-primary" data-servico="Caso Urgente">Acione o Resposta Rápida</a>
+        </div>
+      </div>
+      <div class="resposta-features fade-up">
+        <div class="resposta-feature">
+          <div class="resposta-feature-dot"></div>
+          <div class="resposta-feature-text">
+            <strong>Atendimento Prioritário</strong>
+            Seu caso recebe atenção imediata, com resposta em até 48 horas úteis após o contato inicial.
+          </div>
+        </div>
+        <div class="resposta-feature">
+          <div class="resposta-feature-dot"></div>
+          <div class="resposta-feature-text">
+            <strong>Sem Necessidade de Parceria Prévia</strong>
+            Qualquer empresa pode acionar diretamente a Câmara, sem necessidade de contrato prévio.
+          </div>
+        </div>
+        <div class="resposta-feature">
+          <div class="resposta-feature-dot"></div>
+          <div class="resposta-feature-text">
+            <strong>Mediadores Especializados Disponíveis</strong>
+            Equipe dedicada com formação em letramento racial e técnicas avançadas de mediação para atender prontamente.
+          </div>
+        </div>
+        <div class="resposta-feature">
+          <div class="resposta-feature-dot"></div>
+          <div class="resposta-feature-text">
+            <strong>Processo Confidencial e Respeitoso</strong>
+            Todo o processo é conduzido com sigilo total e respeito à dignidade de todas as partes envolvidas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="section-inner">
+    <div class="cta-inner fade-up">
+      <span class="section-tag section-tag--centered"><span class="tag-dash-before"></span>Seja Parceiro</span>
+      <h2>Torne sua empresa <em>referência</em> no tratamento de conflitos raciais</h2>
+      <p>Junte-se à Câmara de Mediação Zumbi dos Palmares e demonstre o compromisso da sua empresa com a equidade racial, a boa-fé e a responsabilidade social.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:32px auto 0;width:180px;">
+        <div style="height:1px;flex:1;background:linear-gradient(to right,transparent,#C4922A);"></div>
+        <div style="width:6px;height:6px;background:linear-gradient(135deg,#f5e27a,#C4922A);border-radius:50%;flex-shrink:0;"></div>
+        <div style="height:1px;flex:1;background:linear-gradient(to left,transparent,#C4922A);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="section-inner">
+    <div class="contato-grid">
+      <div class="contato-info fade-up">
+        <span class="section-tag">Contato</span>
+        <h2 class="section-title">Fale com a <em>nossa equipe</em></h2>
+        <p class="section-subtitle">Preencha o formulário e entraremos em contato em até 7 dias úteis.</p>
+        <div class="contato-details">
+          <div class="contato-detail">
+            <span class="contato-detail-label">Email</span>
+            <span class="contato-detail-value">elisa.lucena@faleck.com.br</span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Empresa</span>
+            <span class="contato-detail-value">Faleck &amp; Associados</span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Site</span>
+            <span class="contato-detail-value"><a href="https://faleck.com.br" target="_blank">faleck.com.br</a></span>
+          </div>
+          <div class="contato-detail">
+            <span class="contato-detail-label">Iniciativa</span>
+            <span class="contato-detail-value"><a href="https://iniciativaempresarial.com.br" target="_blank">iniciativaempresarial.com.br</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="contato-form-wrap fade-up">
+        <form class="contato-form" id="contato-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="f-empresa">Empresa</label>
+              <input type="text" id="f-empresa" placeholder="Nome da empresa">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="f-servico">Tipo de solicitação</label>
+            <select id="f-servico">
+              <option value="Parceria">Tornar-se parceiro</option>
+              <option value="Caso Urgente">Caso urgente — Resposta Rápida</option>
+              <option value="Informações">Informações gerais</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-mensagem">Mensagem</label>
+            <textarea id="f-mensagem" rows="4" placeholder="Descreva brevemente o seu caso ou solicitação"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; cursor:pointer; border:none; font-size:13px;">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logos">
+        <img src="logo-zumbi-branco-completo.webp" alt="Universidade Zumbi dos Palmares" class="footer-logo">
+        <span class="footer-faleck-text">Faleck &amp; Associados</span>
+      </div>
+      <p>Câmara de Mediação Zumbi dos Palmares, uma parceria entre Faleck & Associados e o Instituto e Universidade Zumbi dos Palmares para a resolução de conflitos raciais de consumo.</p>
+    </div>
+    <div>
+      <h4>A Câmara</h4>
+      <ul>
+        <li><a href="#camara">O que é a Câmara</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Participar</h4>
+      <ul>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#fluxo">Etapas da Mediação</a></li>
+        <li><a href="#acionar">Resposta Rápida</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias">elisa.lucena@faleck.com.br</a></li>
+        <li><a href="https://faleck.com.br" target="_blank">faleck.com.br</a></li>
+        <li><a href="https://iniciativaempresarial.com.br" target="_blank">iniciativaempresarial.com.br</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Câmara de Mediação Zumbi dos Palmares · Faleck & Associados. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script>
+  // Fix iOS Safari viewport height
+  function setVh() {
+    document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+  }
+  setVh();
+  window.addEventListener('resize', setVh);
+
+  // Smooth scroll without changing URL
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Gold nav button only after scrolling past hero
+  const navCta = document.querySelector('.nav-cta');
+  const hero = document.querySelector('.hero');
+  const onScroll = () => {
+    if (window.scrollY > hero.offsetHeight * 0.8) {
+      navCta.classList.add('scrolled');
+    } else {
+      navCta.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Pre-select service on contact form when coming from a specific button
+  document.querySelectorAll('a[data-servico]').forEach(link => {
+    link.addEventListener('click', function() {
+      const servico = this.getAttribute('data-servico');
+      setTimeout(() => {
+        const sel = document.getElementById('f-servico');
+        if (sel) sel.value = servico;
+      }, 400);
+    });
+  });
+
+  // Form submit — compose mailto
+  document.getElementById('contato-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('f-nome').value;
+    const empresa = document.getElementById('f-empresa').value;
+    const email = document.getElementById('f-email').value;
+    const servico = document.getElementById('f-servico').value;
+    const mensagem = document.getElementById('f-mensagem').value;
+    const subject = encodeURIComponent(`${servico} — Câmara Zumbi dos Palmares`);
+    const body = encodeURIComponent(`Nome: ${nome}\nEmpresa: ${empresa}\nEmail: ${email}\nTipo: ${servico}\n\nMensagem:\n${mensagem}`);
+    window.open(`mailto:elisa.lucena@faleck.com.br?subject=${subject}&body=${body}`, '_blank');
+  });
+
+  // Open all mailto and external links in new tab
+  document.querySelectorAll('a[href^="mailto:"], a[href^="http"]').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
