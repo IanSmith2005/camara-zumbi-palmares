@@ -1,565 +1,934 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Câmara de Mediação Racial nas Relações de Consumo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Bebas+Neue&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câmara de Mediação Racial nas Relações de Consumo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Bebas+Neue&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#home" class="nav-logo"
+        ><img
+          src="images/NewLogo-transparent.png"
+          alt="Câmara de Mediação Racial nas Relações de Consumo"
+      /></a>
+      <div class="nav-links">
+        <a href="#camara" class="nav-link">Sobre</a>
+        <a href="#quem-somos" class="nav-link">Quem Somos</a>
+        <a href="#beneficios" class="nav-link">Benefícios</a>
+        <a href="#acionar" class="nav-link">Resposta Rápida</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <a href="#contato" class="nav-cta" data-servico="Parceria"
+          >Acionar a Câmara</a
+        >
+      </div>
+    </nav>
 
-<!-- NAV -->
-<nav>
-  <a href="#home" class="nav-logo"><img src="images/NewLogo-transparent.png" alt="Câmara de Mediação Racial nas Relações de Consumo"></a>
-  <div class="nav-links">
-    <a href="#camara" class="nav-link">Sobre</a>
-    <a href="#quem-somos" class="nav-link">Quem Somos</a>
-    <a href="#beneficios" class="nav-link">Benefícios</a>
-    <a href="#acionar" class="nav-link">Resposta Rápida</a>
-  </div>
-  <div style="display:flex; align-items:center; gap:12px;">
-    <a href="#contato" class="nav-cta" data-servico="Parceria">Acionar a Câmara</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-deco"></div>
-  <div class="hero-content">
-    <h1>Resolução de conflitos <em>raciais</em> com excelência e respeito</h1>
-    <p class="hero-sub">Uma iniciativa da Universidade Zumbi dos Palmares e Faleck & Associados para prevenir e resolver conflitos de consumo com possíveis aspectos discriminatórios, com viés racial ou análogos.</p>
-    <div class="hero-actions">
-      <a href="#contato" class="btn-primary" data-servico="Parceria">Seja Parceiro</a>
-      <a href="#acionar" class="btn-outline">Resposta Rápida</a>
-    </div>
-  </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">+15 anos</div>
-      <div class="hero-stat-label">de experiência em mediação complexa</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">+100</div>
-      <div class="hero-stat-label">mediadores especializados</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">1ª</div>
-      <div class="hero-stat-label">câmara especializada em conflitos raciais no Brasil</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">RACISMO ZERO</div>
-      <div class="hero-stat-label">Equipe criadora do programa racismo zero</div>
-    </div>
-  </div>
-</section>
-
-<!-- O QUE É A CÂMARA -->
-<section class="camara" id="camara">
-  <div class="section-inner">
-    <div class="camara-grid">
-      <div class="camara-text fade-up">
-        <span class="section-tag">O que é a Câmara</span>
-        <h2 class="section-title">Um espaço <em>dedicado</em> ao tratamento adequado de conflitos raciais</h2>
-        <p class="section-subtitle">A Câmara tem como objetivo dar um tratamento adequado aos conflitos consumeristas que envolvam aspectos discriminatórios, auxiliando as empresas a se posicionar na prevenção e no combate de condutas inadequadas e os consumidores a terem um espaço adequado e respeitoso para encontrar a melhor solução para a situação vivenciada.</p>
-        <div class="camara-buttons">
-          <a href="#" class="btn-regulamento">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Leia o Regulamento da Câmara
-          </a>
-          <a href="livreto_camara_mediacao_v30.pdf#page=11" target="_blank" class="btn-principios">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Aprenda mais sobre os 10 princípios de enfrentamento ao racismo nas relações de consumo
-          </a>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-deco"></div>
+      <div class="hero-content">
+        <h1>
+          Resolução de conflitos <em>raciais</em> com excelência e respeito
+        </h1>
+        <p class="hero-sub">
+          Uma iniciativa da Universidade Zumbi dos Palmares, no âmbito do
+          Programa Racismo Zero, com aporte técnico da Faleck & Associados para
+          prevenir e resolver conflitos de consumo com possíveis aspectos
+          discriminatórios, com viés racial ou análogos.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn-primary" data-servico="Parceria"
+            >Seja Parceiro</a
+          >
+          <a href="#acionar" class="btn-outline">Resposta Rápida</a>
         </div>
       </div>
-      <div class="fade-up">
-        <div class="camara-features">
-          <div class="camara-feature">
-            <div class="camara-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">+15 anos</div>
+          <div class="hero-stat-label">de experiência em mediação complexa</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">+100</div>
+          <div class="hero-stat-label">mediadores especializados</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">1ª</div>
+          <div class="hero-stat-label">
+            câmara especializada em conflitos raciais no Brasil
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">RACISMO ZERO</div>
+          <div class="hero-stat-label">
+            Equipe criadora do programa racismo zero
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE É A CÂMARA -->
+    <section class="camara" id="camara">
+      <div class="section-inner">
+        <div class="camara-grid">
+          <div class="camara-text fade-up">
+            <span class="section-tag">O que é a Câmara</span>
+            <h2 class="section-title">
+              Um espaço <em>dedicado</em> ao tratamento adequado de conflitos
+              raciais
+            </h2>
+            <p class="section-subtitle">
+              A Câmara tem como objetivo dar um tratamento adequado aos
+              conflitos consumeristas que envolvam aspectos discriminatórios,
+              auxiliando as empresas a se posicionar na prevenção e no combate
+              de condutas inadequadas e os consumidores a terem um espaço
+              adequado e respeitoso para encontrar a melhor solução para a
+              situação vivenciada.
+            </p>
+            <div class="camara-buttons">
+              <a href="#" class="btn-regulamento">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="15"
+                  height="15"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+                Leia o Regulamento da Câmara
+              </a>
+              <a
+                href="livreto_camara_mediacao_v30.pdf#page=11"
+                target="_blank"
+                rel="noopener"
+                class="btn-principios"
+              >
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                Aprenda mais sobre os 10 princípios de enfrentamento ao racismo
+                nas relações de consumo
+              </a>
             </div>
-            <div class="camara-feature-text">
-              <strong>Mediadores de Primeira Linha</strong>
-              <span>Treinamento nas melhores técnicas da Escola de Harvard em negociação, mediação e letramento racial.</span>
+          </div>
+          <div class="fade-up">
+            <div class="camara-features">
+              <div class="camara-feature">
+                <div class="camara-feature-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                </div>
+                <div class="camara-feature-text">
+                  <strong>Mediadores de Primeira Linha</strong>
+                  <span
+                    >Treinamento nas melhores técnicas da Escola de Harvard em
+                    negociação, mediação e letramento racial.</span
+                  >
+                </div>
+              </div>
+              <div class="camara-feature">
+                <div class="camara-feature-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9 11l3 3L22 4" />
+                    <path
+                      d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+                    />
+                  </svg>
+                </div>
+                <div class="camara-feature-text">
+                  <strong>Protocolo de Triagem</strong>
+                  <span
+                    >Identificação e seleção criteriosa dos casos elegíveis à
+                    mediação com elementos raciais.</span
+                  >
+                </div>
+              </div>
+              <div class="camara-feature">
+                <div class="camara-feature-icon">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                  </svg>
+                </div>
+                <div class="camara-feature-text">
+                  <strong>Regimento Sensível à Temática Racial</strong>
+                  <span
+                    >Regimento e protocolos desenvolvidos com sensibilidade às
+                    questões e vieses raciais.</span
+                  >
+                </div>
+              </div>
+              <div class="camara-feature">
+                <div class="camara-feature-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                    <path d="M16 3.13a4 4 0 010 7.75" />
+                  </svg>
+                </div>
+                <div class="camara-feature-text">
+                  <strong>Mediação Multipartes</strong>
+                  <span
+                    >Para casos de repercussão envolvendo dano moral coletivo e
+                    necessidade de ajustamento de conduta.</span
+                  >
+                </div>
+              </div>
+              <div class="camara-feature">
+                <div class="camara-feature-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                    />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg>
+                </div>
+                <div class="camara-feature-text">
+                  <strong>Protocolo Consumerista</strong>
+                  <span
+                    >Processo estruturado com foco específico em casos
+                    consumeristas com aspectos discriminatórios.</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="camara-feature">
-            <div class="camara-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS / TRAJETÓRIA -->
+    <section class="quem-somos" id="quem-somos">
+      <div class="section-inner">
+        <span class="section-tag">Quem Somos</span>
+        <h2 class="section-title">
+          Uma Trajetória em Defesa do <em>Consumidor Negro</em>
+        </h2>
+        <p class="section-subtitle">
+          Há mais de uma década, a Universidade Zumbi dos Palmares atua de forma
+          consistente na construção de respostas institucionais ao racismo nas
+          relações de consumo. A Câmara de Mediação Racial nas Relações de
+          Consumo é o passo mais recente de uma trajetória de pesquisa,
+          articulação e protagonismo que mobilizou poder público, setor privado
+          e sociedade civil em torno de soluções concretas e duradouras.<br /><br />A
+          iniciativa foi desenvolvida pela instituição em colaboração com o
+          escritório Faleck &amp; Associados, pioneiros em resolução
+          extrajudicial de conflitos no Brasil, com +100 mediadores de primeira
+          linha, liderando o mercado em disputas nacionais e internacionais de
+          todos os portes.
+        </p>
+
+        <div class="timeline-wrapper fade-up">
+          <div class="timeline-outer" id="timeline-outer">
+            <div class="timeline-track">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jun. 2020</div>
+                <div class="timeline-label">
+                  Movimento AR e Manifesto Vidas Negras Importam
+                </div>
+                <div class="timeline-tooltip-box">
+                  A Zumbi lidera a articulação nacional pelo direito à vida e à
+                  dignidade da população negra, em torno de dez metas
+                  estratégicas.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Nov. 2020</div>
+                <div class="timeline-label">
+                  Programa Segurança Sem Preconceito
+                </div>
+                <div class="timeline-tooltip-box">
+                  Em parceria com FENAVIST, ABSEG e ABCFV, a Zumbi forma agentes
+                  de segurança privada em letramento racial e integra grupo de
+                  trabalho do CNJ.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Nov. 2021</div>
+                <div class="timeline-label">PROCON Racial</div>
+                <div class="timeline-tooltip-box">
+                  Em parceria com a Fundação PROCON-SP, a Zumbi cria o primeiro
+                  canal exclusivo do Brasil para denúncias de discriminação
+                  racial no consumo, com acolhimento qualificado.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Mar. 2022</div>
+                <div class="timeline-label">
+                  Programa Racismo Zero nas Relações de Consumo
+                </div>
+                <div class="timeline-tooltip-box">
+                  Lançado no Dia Internacional de Luta Contra a Discriminação
+                  Racial. Articula PROCON Racial, Manual Antirracista no Varejo
+                  e Projeto Acolhe.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Abr. 2023</div>
+                <div class="timeline-label">Campanha Notas do Respeito</div>
+                <div class="timeline-tooltip-box">
+                  Em parceria com a Agência Grey Brasil, a Zumbi transforma a
+                  nota fiscal em instrumento de conscientização e canal
+                  qualificado de orientação jurídica e psicológica.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Mar. 2024</div>
+                <div class="timeline-label">Bolsa Antirracista</div>
+                <div class="timeline-tooltip-box">
+                  Nova ação pública do Programa Racismo Zero. A peça, criada
+                  pela estilista Naya Violeta, traduz a Lei nº 14.532/2023 em
+                  linguagem cotidiana e direciona consumidores ao acolhimento.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2026</div>
+                <div class="timeline-label">
+                  Câmara de Mediação Racial nas Relações de Consumo
+                </div>
+                <div class="timeline-tooltip-box">
+                  A trajetória ganha um mecanismo especializado de prevenção e
+                  resolução de conflitos de consumo com viés racial, em parceria
+                  com a Faleck &amp; Associados.
+                </div>
+              </div>
             </div>
-            <div class="camara-feature-text">
-              <strong>Protocolo de Triagem</strong>
-              <span>Identificação e seleção criteriosa dos casos elegíveis à mediação com elementos raciais.</span>
+          </div>
+          <p class="timeline-hint">← deslize para explorar a trajetória →</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios" id="beneficios">
+      <div class="section-inner">
+        <div class="beneficios-header fade-up">
+          <span class="section-tag">Benefícios</span>
+          <h2 class="section-title">Por que escolher a <em>Câmara</em></h2>
+          <p class="section-subtitle">
+            Vantagens concretas tanto para empresas quanto para consumidores que
+            buscam uma resolução justa, eficiente e respeitosa.
+          </p>
+        </div>
+        <div class="beneficios-grid">
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+            </div>
+            <h4>Confidencialidade</h4>
+            <p>
+              Todo o processo é estritamente sigiloso. As informações trocadas
+              não podem ser utilizadas em processos judiciais, garantindo
+              segurança a todas as partes.
+            </p>
+          </div>
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <h4>Especialização</h4>
+            <p>
+              Mediadores com treinamento em letramento racial e nas melhores
+              técnicas da Escola de Harvard, garantindo condução tecnicamente
+              qualificada.
+            </p>
+          </div>
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h4>Eficiência</h4>
+            <p>
+              Resolução mais rápida e menos custosa do que o processo judicial
+              tradicional, com resultados concretos e acordos sustentáveis para
+              ambas as partes.
+            </p>
+          </div>
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h4>Gerenciamento de Responsabilidade Jurídica</h4>
+            <p>
+              Reduz o risco de condenações judiciais e mitiga a responsabilidade
+              legal da empresa ao tratar conflitos de forma proativa e
+              estruturada.
+            </p>
+          </div>
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h4>Prevenção de Exposição Negativa</h4>
+            <p>
+              Resolve conflitos antes que se tornem crises públicas, protegendo
+              a reputação da empresa e evitando exposição midiática negativa.
+            </p>
+          </div>
+          <div class="beneficio-card fade-up">
+            <div class="beneficio-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                />
+              </svg>
+            </div>
+            <h4>Demonstração de Diligência e Boa-Fé</h4>
+            <p>
+              Sinaliza ao mercado, consumidores e autoridades que a empresa age
+              com responsabilidade e comprometimento frente a conflitos raciais.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPACITAÇÃO -->
+    <section class="capacitacao" id="capacitacao">
+      <div class="section-inner">
+        <div class="fade-up">
+          <span class="section-tag">Capacitação</span>
+          <h2 class="section-title">
+            Outras Iniciativas de <em>Prevenção</em>
+          </h2>
+          <p class="section-subtitle">
+            A Câmara oferece para empresas parceiras treinamentos especializados
+            desenvolvidos pela Universidade Zumbi dos Palmares.
+          </p>
+        </div>
+        <div class="capacitacao-grid fade-up">
+          <div class="capacitacao-card">
+            <span class="capacitacao-label">Treinamento I</span>
+            <h3>Letramento Racial e Antirracismo no Atendimento ao Cliente</h3>
+            <p>
+              Capacitação voltada para equipes de atendimento ao cliente,
+              vendedores, caixas, seguranças, SAC e canais de relacionamento,
+              promovendo práticas antidiscriminatórias no contato direto com o
+              consumidor.
+            </p>
+          </div>
+          <div class="capacitacao-card">
+            <span class="capacitacao-label">Treinamento II</span>
+            <h3>
+              Implementação do Protocolo Antirracista: Aspectos Legais e
+              Operacionais
+            </h3>
+            <p>
+              Treinamento prático sobre a criação e implementação de protocolos
+              internos antirracistas, adequados à lei nº 18.427/2026, abordando
+              o enquadramento jurídico e os processos operacionais necessários.
+            </p>
+          </div>
+          <div class="capacitacao-card">
+            <span class="capacitacao-label">Treinamento III</span>
+            <h3>Módulo de Formação Compacto em Legislação Antirracista</h3>
+            <p>
+              Módulo introdutório sobre o marco legal antirracista brasileiro e
+              legislações correlatas. Capacita gestores, jurídico e RH a
+              compreender obrigações legais, riscos de não conformidade e as
+              boas práticas exigidas pelo novo contexto regulatório.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETAPAS DA MEDIAÇÃO -->
+    <section class="fluxo" id="fluxo">
+      <div class="section-inner">
+        <div class="fluxo-grid">
+          <div class="fluxo-intro fade-up">
+            <span class="section-tag">Etapas da Mediação</span>
+            <h2 class="section-title">
+              Como os casos são <em>tratados</em> pela Câmara
+            </h2>
+            <p class="section-subtitle">
+              Cada caso recebido passa por um protocolo rigoroso, garantindo
+              triagem adequada, engajamento respeitoso das partes e uma
+              resolução justa.
+            </p>
+          </div>
+          <div class="fluxo-steps fade-up">
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">1</div>
+              <div class="fluxo-step-content">
+                <h4>Recebimento do Caso</h4>
+                <p>
+                  O caso é recebido pela secretaria da Câmara, que registra
+                  todas as informações iniciais e organiza a documentação
+                  necessária.
+                </p>
+              </div>
+            </div>
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">2</div>
+              <div class="fluxo-step-content">
+                <h4>Triagem do Caso</h4>
+                <p>
+                  Análise criteriosa para verificar a elegibilidade do caso,
+                  identificando a presença de elementos raciais e a adequação à
+                  mediação.
+                </p>
+              </div>
+            </div>
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">3</div>
+              <div class="fluxo-step-content">
+                <h4>Engajamento das Partes</h4>
+                <p>
+                  O mediador entra em contato com todas as partes envolvidas,
+                  apresentando o processo e garantindo o engajamento voluntário
+                  e informado.
+                </p>
+              </div>
+            </div>
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">4</div>
+              <div class="fluxo-step-content">
+                <h4>Mediação</h4>
+                <p>
+                  Realização das sessões de mediação com protocolo sensível às
+                  questões raciais, conduzidas por mediadores especializados.
+                </p>
+              </div>
+            </div>
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">5</div>
+              <div class="fluxo-step-content">
+                <h4>Acordo ou Arquivamento</h4>
+                <p>
+                  Formalização do acordo alcançado entre as partes, ou
+                  arquivamento do caso com registro detalhado do processo e dos
+                  resultados.
+                </p>
+              </div>
+            </div>
+            <div class="fluxo-step">
+              <div class="fluxo-step-num">6</div>
+              <div class="fluxo-step-content">
+                <h4>Relatório de Resultados</h4>
+                <p>
+                  Emissão de relatório completo dos casos encaminhados pela
+                  empresa, com indicadores de desempenho e recomendações de
+                  melhoria.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="camara-feature">
-            <div class="camara-feature-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESPOSTA RÁPIDA -->
+    <section class="resposta-rapida" id="acionar">
+      <div class="section-inner">
+        <div class="resposta-inner">
+          <div class="fade-up">
+            <div class="resposta-badge">
+              <span>Alta Prioridade</span>
             </div>
-            <div class="camara-feature-text">
-              <strong>Regimento Sensível à Temática Racial</strong>
-              <span>Regimento e protocolos desenvolvidos com sensibilidade às questões e vieses raciais.</span>
+            <h2>Precisa resolver um caso <em>agora?</em></h2>
+            <p>
+              Possui um caso que não pode esperar? Se você é uma empresa ou
+              consumidor de empresa conveniada com um caso urgente que envolva
+              aspectos raciais, a ativação via Resposta Rápida garante atenção
+              imediata e prioritária, sem burocracia.
+            </p>
+            <div class="elegibilidade-box">
+              <div class="elegibilidade-header">
+                <span class="elegibilidade-icon">✓</span>
+                <strong>Sou elegível para este mecanismo?</strong>
+              </div>
+              <ul class="elegibilidade-lista">
+                <li>Primeiro contato com o programa</li>
+                <li>Empresa / Consumidor de empresa parceira</li>
+                <li>
+                  O caso envolve aspecto racial claro e demanda resposta rápida
+                </li>
+              </ul>
+            </div>
+            <div class="hero-actions">
+              <a href="#contato" class="btn-primary" data-servico="Caso Urgente"
+                >Acione o Resposta Rápida</a
+              >
             </div>
           </div>
-          <div class="camara-feature">
-            <div class="camara-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <div class="resposta-features fade-up">
+            <div class="resposta-feature">
+              <div class="resposta-feature-dot"></div>
+              <div class="resposta-feature-text">
+                <strong>Atendimento Prioritário</strong>
+                Seu caso recebe atenção imediata, com resposta em até 48 horas
+                úteis após o contato inicial.
+              </div>
             </div>
-            <div class="camara-feature-text">
-              <strong>Mediação Multipartes</strong>
-              <span>Para casos de repercussão envolvendo dano moral coletivo e necessidade de ajustamento de conduta.</span>
+            <div class="resposta-feature">
+              <div class="resposta-feature-dot"></div>
+              <div class="resposta-feature-text">
+                <strong>Sem Necessidade de Parceria Prévia</strong>
+                Qualquer empresa pode acionar diretamente a Câmara, sem
+                necessidade de contrato prévio.
+              </div>
+            </div>
+            <div class="resposta-feature">
+              <div class="resposta-feature-dot"></div>
+              <div class="resposta-feature-text">
+                <strong>Mediadores Especializados Disponíveis</strong>
+                Equipe dedicada com formação em letramento racial e técnicas
+                avançadas de mediação para atender prontamente.
+              </div>
+            </div>
+            <div class="resposta-feature">
+              <div class="resposta-feature-dot"></div>
+              <div class="resposta-feature-text">
+                <strong>Processo Confidencial e Respeitoso</strong>
+                Todo o processo é conduzido com sigilo total e respeito à
+                dignidade de todas as partes envolvidas.
+              </div>
             </div>
           </div>
-          <div class="camara-feature">
-            <div class="camara-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTITUIÇÕES PARCEIRAS -->
+    <section class="parceiros" id="parceiros">
+      <div class="section-inner">
+        <div class="fade-up" style="text-align: center">
+          <span class="section-tag section-tag--centered"
+            ><span class="tag-dash-before"></span>Parceiros</span
+          >
+          <h2 class="section-title" style="text-align: center">
+            Instituições <em>Parceiras</em>
+          </h2>
+          <p
+            class="section-subtitle"
+            style="max-width: 600px; margin: 0 auto 0"
+          >
+            Uma rede institucional de referência que sustenta a credibilidade, o
+            alcance e o impacto da Câmara de Mediação Racial nas Relações de
+            Consumo.
+          </p>
+        </div>
+        <div class="parceiros-grid fade-up">
+          <div class="parceiros-row">
+            <a href="https://www.procon.sp.gov.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-proconsp.png" alt="PROCON-SP" />
+            </a>
+            <a href="https://www.fecomercio.com.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-fecomercio.png" alt="Fecomércio SP" />
+            </a>
+            <a href="https://www.idv.org.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-idv.png" alt="IDV" />
+            </a>
+            <a href="https://www.fenavist.org.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-fenavist.png" alt="Fenavist" />
+            </a>
+            <a href="https://apas.com.br/" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-apas.png" alt="APAS" />
+            </a>
+          </div>
+          <div class="parceiros-row">
+            <a href="https://www.faleck.com.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/Logo Faleck.jpg" alt="Faleck &amp; Associados" />
+            </a>
+            <a href="https://iniciativaempresarial.com.br" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-iere.png" alt="IERE" />
+            </a>
+            <a href="https://somosmover.org" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-mover.png" alt="MOVER" />
+            </a>
+            <a href="https://ananadv.com.br/" target="_blank" rel="noopener" class="parceiro-tile">
+              <img src="images/logo-anan.png" alt="ANAN" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="section-inner">
+        <div class="cta-inner fade-up">
+          <span class="section-tag section-tag--centered"
+            ><span class="tag-dash-before"></span>Seja Parceiro</span
+          >
+          <h2>
+            Torne sua empresa <em>referência</em> no tratamento de conflitos
+            raciais
+          </h2>
+          <p>
+            Junte-se à Câmara de Mediação Racial nas Relações de Consumo e
+            demonstre o compromisso da sua empresa com a equidade racial, a
+            boa-fé e a responsabilidade social.
+          </p>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 12px;
+              margin: 32px auto 0;
+              width: 180px;
+            "
+          >
+            <div
+              style="
+                height: 1px;
+                flex: 1;
+                background: linear-gradient(to right, transparent, #c9a050);
+              "
+            ></div>
+            <div
+              style="
+                width: 6px;
+                height: 6px;
+                background: #c9a050;
+                border-radius: 50%;
+                flex-shrink: 0;
+              "
+            ></div>
+            <div
+              style="
+                height: 1px;
+                flex: 1;
+                background: linear-gradient(to left, transparent, #c9a050);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+      <div class="section-inner">
+        <div class="contato-grid">
+          <div class="contato-info fade-up">
+            <span class="section-tag">Contato</span>
+            <h2 class="section-title">Fale com a <em>nossa equipe</em></h2>
+            <p class="section-subtitle">
+              Preencha o formulário e entraremos em contato em até 7 dias úteis.
+            </p>
+            <div class="contato-details">
+              <div class="contato-detail">
+                <span class="contato-detail-label">Email</span>
+                <span class="contato-detail-value"
+                  >elisa.lucena@faleck.com.br</span
+                >
+              </div>
+              <div class="contato-detail">
+                <span class="contato-detail-label">Empresa</span>
+                <span class="contato-detail-value"
+                  >Faleck &amp; Associados</span
+                >
+              </div>
+              <div class="contato-detail">
+                <span class="contato-detail-label">Site</span>
+                <span class="contato-detail-value"
+                  ><a href="https://faleck.com.br" target="_blank"
+                    >faleck.com.br</a
+                  ></span
+                >
+              </div>
+              <div class="contato-detail">
+                <span class="contato-detail-label">Iniciativa</span>
+                <span class="contato-detail-value"
+                  ><a
+                    href="https://iniciativaempresarial.com.br"
+                    target="_blank"
+                    >iniciativaempresarial.com.br</a
+                  ></span
+                >
+              </div>
             </div>
-            <div class="camara-feature-text">
-              <strong>Protocolo Consumerista</strong>
-              <span>Processo estruturado com foco específico em casos consumeristas com aspectos discriminatórios.</span>
-            </div>
+          </div>
+          <div class="contato-form-wrap fade-up">
+            <form class="contato-form" id="contato-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-nome">Nome</label>
+                  <input
+                    type="text"
+                    id="f-nome"
+                    name="nome"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="f-empresa">Empresa</label>
+                  <input
+                    type="text"
+                    id="f-empresa"
+                    name="empresa"
+                    placeholder="Nome da empresa"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email</label>
+                <input
+                  type="email"
+                  id="f-email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="f-servico">Tipo de solicitação</label>
+                <select id="f-servico" name="servico">
+                  <option value="Parceria">Tornar-se parceiro</option>
+                  <option value="Caso Urgente">
+                    Caso urgente — Resposta Rápida
+                  </option>
+                  <option value="Informações">Informações gerais</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-mensagem">Mensagem</label>
+                <textarea
+                  id="f-mensagem"
+                  name="mensagem"
+                  rows="4"
+                  placeholder="Descreva brevemente o seu caso ou solicitação"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary"
+                style="
+                  width: 100%;
+                  cursor: pointer;
+                  border: none;
+                  font-size: 13px;
+                "
+              >
+                Enviar Mensagem
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- QUEM SOMOS / TRAJETÓRIA -->
-<section class="quem-somos" id="quem-somos">
-  <div class="section-inner">
-    <span class="section-tag">Quem Somos</span>
-    <h2 class="section-title">Uma Trajetória em Defesa do <em>Consumidor Negro</em></h2>
-    <p class="section-subtitle">Há mais de uma década, a Universidade Zumbi dos Palmares atua de forma consistente na construção de respostas institucionais ao racismo nas relações de consumo. A Câmara de Mediação Racial nas Relações de Consumo é o passo mais recente de uma trajetória de pesquisa, articulação e protagonismo que mobilizou poder público, setor privado e sociedade civil em torno de soluções concretas e duradouras.<br><br>A iniciativa foi desenvolvida pela instituição em colaboração com o escritório Faleck &amp; Associados, pioneiros em resolução extrajudicial de conflitos no Brasil, com +100 mediadores de primeira linha, liderando o mercado em disputas nacionais e internacionais de todos os portes.</p>
-
-    <div class="timeline-wrapper fade-up">
-      <div class="timeline-outer" id="timeline-outer">
-        <div class="timeline-track">
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jun. 2020</div>
-            <div class="timeline-label">Movimento AR e Manifesto Vidas Negras Importam</div>
-            <div class="timeline-tooltip-box">A Zumbi lidera a articulação nacional pelo direito à vida e à dignidade da população negra, em torno de dez metas estratégicas.</div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logos">
+            <img
+              src="images/logo-zumbi-branco-completo.webp"
+              alt="Universidade Zumbi dos Palmares"
+              class="footer-logo"
+            />
+            <span class="footer-faleck-text">Faleck &amp; Associados</span>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Nov. 2020</div>
-            <div class="timeline-label">Programa Segurança Sem Preconceito</div>
-            <div class="timeline-tooltip-box">Em parceria com FENAVIST, ABSEG e ABCFV, a Zumbi forma agentes de segurança privada em letramento racial e integra grupo de trabalho do CNJ.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Nov. 2021</div>
-            <div class="timeline-label">PROCON Racial</div>
-            <div class="timeline-tooltip-box">Em parceria com a Fundação PROCON-SP, a Zumbi cria o primeiro canal exclusivo do Brasil para denúncias de discriminação racial no consumo, com acolhimento qualificado.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Mar. 2022</div>
-            <div class="timeline-label">Programa Racismo Zero nas Relações de Consumo</div>
-            <div class="timeline-tooltip-box">Lançado no Dia Internacional de Luta Contra a Discriminação Racial. Articula PROCON Racial, Manual Antirracista no Varejo e Projeto Acolhe.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Abr. 2023</div>
-            <div class="timeline-label">Campanha Notas do Respeito</div>
-            <div class="timeline-tooltip-box">Em parceria com a Agência Grey Brasil, a Zumbi transforma a nota fiscal em instrumento de conscientização e canal qualificado de orientação jurídica e psicológica.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Mar. 2024</div>
-            <div class="timeline-label">Bolsa Antirracista</div>
-            <div class="timeline-tooltip-box">Nova ação pública do Programa Racismo Zero. A peça, criada pela estilista Naya Violeta, traduz a Lei nº 14.532/2023 em linguagem cotidiana e direciona consumidores ao acolhimento.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2026</div>
-            <div class="timeline-label">Câmara de Mediação Racial nas Relações de Consumo</div>
-            <div class="timeline-tooltip-box">A trajetória ganha um mecanismo especializado de prevenção e resolução de conflitos de consumo com viés racial, em parceria com a Faleck &amp; Associados.</div>
-          </div>
-
+          <p>
+            Mecanismo especializado de prevenção e resolução de conflitos de
+            consumo com aspectos discriminatórios e viés racial. Uma parceria
+            entre a Universidade Zumbi dos Palmares e a Faleck &amp; Associados.
+          </p>
         </div>
-      </div>
-      <p class="timeline-hint">← deslize para explorar a trajetória →</p>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFÍCIOS -->
-<section class="beneficios" id="beneficios">
-  <div class="section-inner">
-    <div class="beneficios-header fade-up">
-      <span class="section-tag">Benefícios</span>
-      <h2 class="section-title">Por que escolher a <em>Câmara</em></h2>
-      <p class="section-subtitle">Vantagens concretas tanto para empresas quanto para consumidores que buscam uma resolução justa, eficiente e respeitosa.</p>
-    </div>
-    <div class="beneficios-grid">
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        </div>
-        <h4>Confidencialidade</h4>
-        <p>Todo o processo é estritamente sigiloso. As informações trocadas não podem ser utilizadas em processos judiciais, garantindo segurança a todas as partes.</p>
-      </div>
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <h4>Especialização</h4>
-        <p>Mediadores com treinamento em letramento racial e nas melhores técnicas da Escola de Harvard, garantindo condução tecnicamente qualificada.</p>
-      </div>
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <h4>Eficiência</h4>
-        <p>Resolução mais rápida e menos custosa do que o processo judicial tradicional, com resultados concretos e acordos sustentáveis para ambas as partes.</p>
-      </div>
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4>Gerenciamento de Responsabilidade Jurídica</h4>
-        <p>Reduz o risco de condenações judiciais e mitiga a responsabilidade legal da empresa ao tratar conflitos de forma proativa e estruturada.</p>
-      </div>
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h4>Prevenção de Exposição Negativa</h4>
-        <p>Resolve conflitos antes que se tornem crises públicas, protegendo a reputação da empresa e evitando exposição midiática negativa.</p>
-      </div>
-      <div class="beneficio-card fade-up">
-        <div class="beneficio-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        </div>
-        <h4>Demonstração de Diligência e Boa-Fé</h4>
-        <p>Sinaliza ao mercado, consumidores e autoridades que a empresa age com responsabilidade e comprometimento frente a conflitos raciais.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAPACITAÇÃO -->
-<section class="capacitacao" id="capacitacao">
-  <div class="section-inner">
-    <div class="fade-up">
-      <span class="section-tag">Capacitação</span>
-      <h2 class="section-title">Outras Iniciativas de <em>Prevenção</em></h2>
-      <p class="section-subtitle">A Câmara oferece para empresas parceiras treinamentos especializados desenvolvidos pela Universidade Zumbi dos Palmares.</p>
-    </div>
-    <div class="capacitacao-grid fade-up">
-      <div class="capacitacao-card">
-        <span class="capacitacao-label">Treinamento I</span>
-        <h3>Letramento Racial e Antirracismo no Atendimento ao Cliente</h3>
-        <p>Capacitação voltada para equipes de atendimento ao cliente, vendedores, caixas, seguranças, SAC e canais de relacionamento, promovendo práticas antidiscriminatórias no contato direto com o consumidor.</p>
-      </div>
-      <div class="capacitacao-card">
-        <span class="capacitacao-label">Treinamento II</span>
-        <h3>Implementação do Protocolo Antirracista: Aspectos Legais e Operacionais</h3>
-        <p>Treinamento prático sobre a criação e implementação de protocolos internos antirracistas, adequados à lei nº 18.427/2026, abordando o enquadramento jurídico e os processos operacionais necessários.</p>
-      </div>
-      <div class="capacitacao-card">
-        <span class="capacitacao-label">Treinamento III</span>
-        <h3>Módulo de Formação Compacto em Legislação Antirracista</h3>
-        <p>Módulo introdutório sobre o marco legal antirracista brasileiro e legislações correlatas. Capacita gestores, jurídico e RH a compreender obrigações legais, riscos de não conformidade e as boas práticas exigidas pelo novo contexto regulatório.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ETAPAS DA MEDIAÇÃO -->
-<section class="fluxo" id="fluxo">
-  <div class="section-inner">
-    <div class="fluxo-grid">
-      <div class="fluxo-intro fade-up">
-        <span class="section-tag">Etapas da Mediação</span>
-        <h2 class="section-title">Como os casos são <em>tratados</em> pela Câmara</h2>
-        <p class="section-subtitle">Cada caso recebido passa por um protocolo rigoroso, garantindo triagem adequada, engajamento respeitoso das partes e uma resolução justa.</p>
-      </div>
-      <div class="fluxo-steps fade-up">
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">1</div>
-          <div class="fluxo-step-content">
-            <h4>Recebimento do Caso</h4>
-            <p>O caso é recebido pela secretaria da Câmara, que registra todas as informações iniciais e organiza a documentação necessária.</p>
-          </div>
-        </div>
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">2</div>
-          <div class="fluxo-step-content">
-            <h4>Triagem do Caso</h4>
-            <p>Análise criteriosa para verificar a elegibilidade do caso, identificando a presença de elementos raciais e a adequação à mediação.</p>
-          </div>
-        </div>
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">3</div>
-          <div class="fluxo-step-content">
-            <h4>Engajamento das Partes</h4>
-            <p>O mediador entra em contato com todas as partes envolvidas, apresentando o processo e garantindo o engajamento voluntário e informado.</p>
-          </div>
-        </div>
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">4</div>
-          <div class="fluxo-step-content">
-            <h4>Mediação</h4>
-            <p>Realização das sessões de mediação com protocolo sensível às questões raciais, conduzidas por mediadores especializados.</p>
-          </div>
-        </div>
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">5</div>
-          <div class="fluxo-step-content">
-            <h4>Acordo ou Arquivamento</h4>
-            <p>Formalização do acordo alcançado entre as partes, ou arquivamento do caso com registro detalhado do processo e dos resultados.</p>
-          </div>
-        </div>
-        <div class="fluxo-step">
-          <div class="fluxo-step-num">6</div>
-          <div class="fluxo-step-content">
-            <h4>Relatório de Resultados</h4>
-            <p>Emissão de relatório completo dos casos encaminhados pela empresa, com indicadores de desempenho e recomendações de melhoria.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESPOSTA RÁPIDA -->
-<section class="resposta-rapida" id="acionar">
-  <div class="section-inner">
-    <div class="resposta-inner">
-      <div class="fade-up">
-        <div class="resposta-badge">
-          <span>Alta Prioridade</span>
-        </div>
-        <h2>Precisa resolver um caso <em>agora</em>?</h2>
-        <p>Possui um caso que não pode esperar? Se você é uma empresa ou consumidor de empresa conveniada com um caso urgente que envolva aspectos raciais, a ativação via Resposta Rápida garante atenção imediata e prioritária, sem burocracia.</p>
-        <div class="elegibilidade-box">
-          <div class="elegibilidade-header">
-            <span class="elegibilidade-icon">✓</span>
-            <strong>Sou elegível para este mecanismo?</strong>
-          </div>
-          <ul class="elegibilidade-lista">
-            <li>Primeiro contato com o programa</li>
-            <li>Empresa / Consumidor de empresa parceira</li>
-            <li>O caso envolve aspecto racial claro e demanda resposta rápida</li>
+        <div>
+          <h4>A Câmara</h4>
+          <ul>
+            <li><a href="#camara">O que é a Câmara</a></li>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
           </ul>
         </div>
-        <div class="hero-actions">
-          <a href="#contato" class="btn-primary" data-servico="Caso Urgente">Acione o Resposta Rápida</a>
+        <div>
+          <h4>Participar</h4>
+          <ul>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#fluxo">Etapas da Mediação</a></li>
+            <li><a href="#acionar">Resposta Rápida</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <a
+                href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias"
+                >elisa.lucena@faleck.com.br</a
+              >
+            </li>
+            <li>
+              <a href="https://faleck.com.br" target="_blank">faleck.com.br</a>
+            </li>
+            <li>
+              <a href="https://iniciativaempresarial.com.br" target="_blank"
+                >iniciativaempresarial.com.br</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="resposta-features fade-up">
-        <div class="resposta-feature">
-          <div class="resposta-feature-dot"></div>
-          <div class="resposta-feature-text">
-            <strong>Atendimento Prioritário</strong>
-            Seu caso recebe atenção imediata, com resposta em até 48 horas úteis após o contato inicial.
-          </div>
-        </div>
-        <div class="resposta-feature">
-          <div class="resposta-feature-dot"></div>
-          <div class="resposta-feature-text">
-            <strong>Sem Necessidade de Parceria Prévia</strong>
-            Qualquer empresa pode acionar diretamente a Câmara, sem necessidade de contrato prévio.
-          </div>
-        </div>
-        <div class="resposta-feature">
-          <div class="resposta-feature-dot"></div>
-          <div class="resposta-feature-text">
-            <strong>Mediadores Especializados Disponíveis</strong>
-            Equipe dedicada com formação em letramento racial e técnicas avançadas de mediação para atender prontamente.
-          </div>
-        </div>
-        <div class="resposta-feature">
-          <div class="resposta-feature-dot"></div>
-          <div class="resposta-feature-text">
-            <strong>Processo Confidencial e Respeitoso</strong>
-            Todo o processo é conduzido com sigilo total e respeito à dignidade de todas as partes envolvidas.
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <span
+          >© 2026 Câmara de Mediação Racial nas Relações de Consumo ·
+          Universidade Zumbi dos Palmares · Faleck &amp; Associados. Todos os
+          direitos reservados.</span
+        >
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- INSTITUIÇÕES PARCEIRAS -->
-<section class="parceiros" id="parceiros">
-  <div class="section-inner">
-    <div class="fade-up" style="text-align:center;">
-      <span class="section-tag section-tag--centered"><span class="tag-dash-before"></span>Parceiros</span>
-      <h2 class="section-title" style="text-align:center;">Instituições <em>Parceiras</em></h2>
-      <p class="section-subtitle" style="max-width:600px;margin:0 auto 0;">Uma rede institucional de referência que sustenta a credibilidade, o alcance e o impacto da Câmara de Mediação Racial nas Relações de Consumo.</p>
-    </div>
-    <div class="parceiros-grid fade-up">
-      <div class="parceiros-row">
-        <div class="parceiro-tile">
-          <img src="images/logo-proconsp.png" alt="PROCON-SP">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-fecomercio.png" alt="Fecomércio SP">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-idv.png" alt="IDV">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-fenavist.png" alt="Fenavist">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-apas.png" alt="APAS">
-        </div>
-      </div>
-      <div class="parceiros-row">
-        <div class="parceiro-tile">
-          <img src="images/Logo Faleck.jpg" alt="Faleck &amp; Associados">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-iere.png" alt="IERE">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-mover.png" alt="MOVER">
-        </div>
-        <div class="parceiro-tile">
-          <img src="images/logo-anan.png" alt="ANAN">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta-final">
-  <div class="section-inner">
-    <div class="cta-inner fade-up">
-      <span class="section-tag section-tag--centered"><span class="tag-dash-before"></span>Seja Parceiro</span>
-      <h2>Torne sua empresa <em>referência</em> no tratamento de conflitos raciais</h2>
-      <p>Junte-se à Câmara de Mediação Racial nas Relações de Consumo e demonstre o compromisso da sua empresa com a equidade racial, a boa-fé e a responsabilidade social.</p>
-      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:32px auto 0;width:180px;">
-        <div style="height:1px;flex:1;background:linear-gradient(to right,transparent,#C9A050);"></div>
-        <div style="width:6px;height:6px;background:#C9A050;border-radius:50%;flex-shrink:0;"></div>
-        <div style="height:1px;flex:1;background:linear-gradient(to left,transparent,#C9A050);"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section class="contato" id="contato">
-  <div class="section-inner">
-    <div class="contato-grid">
-      <div class="contato-info fade-up">
-        <span class="section-tag">Contato</span>
-        <h2 class="section-title">Fale com a <em>nossa equipe</em></h2>
-        <p class="section-subtitle">Preencha o formulário e entraremos em contato em até 7 dias úteis.</p>
-        <div class="contato-details">
-          <div class="contato-detail">
-            <span class="contato-detail-label">Email</span>
-            <span class="contato-detail-value">elisa.lucena@faleck.com.br</span>
-          </div>
-          <div class="contato-detail">
-            <span class="contato-detail-label">Empresa</span>
-            <span class="contato-detail-value">Faleck &amp; Associados</span>
-          </div>
-          <div class="contato-detail">
-            <span class="contato-detail-label">Site</span>
-            <span class="contato-detail-value"><a href="https://faleck.com.br" target="_blank">faleck.com.br</a></span>
-          </div>
-          <div class="contato-detail">
-            <span class="contato-detail-label">Iniciativa</span>
-            <span class="contato-detail-value"><a href="https://iniciativaempresarial.com.br" target="_blank">iniciativaempresarial.com.br</a></span>
-          </div>
-        </div>
-      </div>
-      <div class="contato-form-wrap fade-up">
-        <form class="contato-form" id="contato-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-nome">Nome</label>
-              <input type="text" id="f-nome" name="nome" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-              <label for="f-empresa">Empresa</label>
-              <input type="text" id="f-empresa" name="empresa" placeholder="Nome da empresa">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="seu@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="f-servico">Tipo de solicitação</label>
-            <select id="f-servico" name="servico">
-              <option value="Parceria">Tornar-se parceiro</option>
-              <option value="Caso Urgente">Caso urgente — Resposta Rápida</option>
-              <option value="Informações">Informações gerais</option>
-              <option value="Outro">Outro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-mensagem">Mensagem</label>
-            <textarea id="f-mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente o seu caso ou solicitação"></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width:100%; cursor:pointer; border:none; font-size:13px;">Enviar Mensagem</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logos">
-        <img src="images/logo-zumbi-branco-completo.webp" alt="Universidade Zumbi dos Palmares" class="footer-logo">
-        <span class="footer-faleck-text">Faleck &amp; Associados</span>
-      </div>
-      <p>Mecanismo especializado de prevenção e resolução de conflitos de consumo com aspectos discriminatórios e viés racial. Uma parceria entre a Universidade Zumbi dos Palmares e a Faleck &amp; Associados.</p>
-    </div>
-    <div>
-      <h4>A Câmara</h4>
-      <ul>
-        <li><a href="#camara">O que é a Câmara</a></li>
-        <li><a href="#quem-somos">Quem Somos</a></li>
-        <li><a href="#beneficios">Benefícios</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Participar</h4>
-      <ul>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="#fluxo">Etapas da Mediação</a></li>
-        <li><a href="#acionar">Resposta Rápida</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contato</h4>
-      <ul>
-        <li><a href="mailto:elisa.lucena@faleck.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Parceria%20-%20C%C3%A2mara%20Zumbi&body=Registre%20sua%20solicita%C3%A7%C3%A3o%20e%20te%20retornaremos%20dentro%20de%207%20dias">elisa.lucena@faleck.com.br</a></li>
-        <li><a href="https://faleck.com.br" target="_blank">faleck.com.br</a></li>
-        <li><a href="https://iniciativaempresarial.com.br" target="_blank">iniciativaempresarial.com.br</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Câmara de Mediação Racial nas Relações de Consumo · Universidade Zumbi dos Palmares · Faleck &amp; Associados. Todos os direitos reservados.</span>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -420,8 +420,9 @@
       transition: background 0.2s, color 0.2s;
     }
     .btn-regulamento:hover {
-      background: var(--marrom);
-      color: var(--offwhite);
+      background: var(--laranja);
+      color: var(--marrom);
+      border-color: var(--laranja);
     }
 
     .camara-features {
@@ -1003,7 +1004,7 @@
 
     /* ─── CTA FINAL ─── */
     .cta-final {
-      background: var(--offwhite);
+      background: var(--cinza-claro);
       text-align: center;
     }
     .cta-inner { max-width: 660px; margin: 0 auto; }
@@ -1123,7 +1124,7 @@
     .cta-final p {
       font-size: 1.02rem;
       line-height: 1.72;
-      color: #444;
+      color: #555;
       margin-bottom: 40px;
     }
 
@@ -1262,10 +1263,12 @@
         flex-wrap: wrap;
       }
       .hero-stat {
-        flex: 1 1 33%;
-        border-right: none;
+        flex: 1 1 50%;
+        border-right: 1px solid rgba(255,255,255,0.08);
         border-bottom: 1px solid rgba(255,255,255,0.08);
       }
+      .hero-stat:nth-child(2n) { border-right: none; }
+      .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
 
       .fluxo-intro { position: static; }
       footer { padding: 56px 24px 36px; }
@@ -1299,10 +1302,13 @@
         margin-right: -24px;
       }
       .hero-stat {
-        flex: 1 1 100%;
+        flex: 1 1 50%;
         border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-right: 1px solid rgba(255,255,255,0.08);
         padding: 10px 12px;
       }
+      .hero-stat:nth-child(2n) { border-right: none; }
+      .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
       .hero-stat-num { font-size: 1rem; }
       .hero-stat-label { font-size: 10px; }
     }
