@@ -74,3 +74,32 @@
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Timeline drag-to-scroll
+  const timelineOuter = document.getElementById('timeline-outer');
+  if (timelineOuter) {
+    let isDragging = false, startX, scrollLeft;
+    timelineOuter.addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.pageX - timelineOuter.offsetLeft;
+      scrollLeft = timelineOuter.scrollLeft;
+      timelineOuter.style.cursor = 'grabbing';
+    });
+    timelineOuter.addEventListener('mouseleave', () => { isDragging = false; timelineOuter.style.cursor = 'grab'; });
+    timelineOuter.addEventListener('mouseup', () => { isDragging = false; timelineOuter.style.cursor = 'grab'; });
+    timelineOuter.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - timelineOuter.offsetLeft;
+      timelineOuter.scrollLeft = scrollLeft - (x - startX) * 1.2;
+    });
+
+    // Touch: toggle active class for tooltip on tap (mobile)
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const wasActive = this.classList.contains('active');
+        document.querySelectorAll('.timeline-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) this.classList.add('active');
+      });
+    });
+  }
