@@ -51,10 +51,34 @@
       text-decoration: none;
       display: flex;
       align-items: center;
+      gap: 14px;
     }
     .nav-logo img {
       height: 76px;
       width: auto;
+    }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .nav-logo-title {
+      font-family: 'Bebas Neue', 'Barlow', sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+    .nav-logo-sub {
+      font-family: 'Archivo', 'Barlow', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.75);
+      margin-top: 2px;
+    }
+    @media (max-width: 760px) {
+      .nav-logo-text { display: none; }
     }
 
     .nav-cta {
@@ -1533,11 +1557,16 @@
     }
 
     .parceiro-tile img {
-      max-height: 48px;
-      max-width: 140px;
+      max-height: 60px;
+      max-width: 160px;
       width: auto;
       height: auto;
       object-fit: contain;
+    }
+    .parceiro-tile img[alt="APAS"],
+    .parceiro-tile img[alt="PROCON-SP Racial"] {
+      max-height: 46px;
+      max-width: 120px;
     }
 
     .parceiro-name {
