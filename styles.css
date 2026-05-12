@@ -441,6 +441,7 @@
       padding: 11px 22px;
       border-radius: 4px;
       text-decoration: none;
+      margin-bottom: 18px;
       transition: background 0.2s, color 0.2s;
     }
     .btn-regulamento:hover {
@@ -1353,7 +1354,6 @@
       padding: 11px 22px;
       border-radius: 4px;
       text-decoration: none;
-      margin-top: 12px;
       transition: background 0.2s, color 0.2s, border-color 0.2s;
     }
     .btn-principios:hover {
@@ -1373,7 +1373,7 @@
     .camara-buttons {
       display: flex;
       flex-direction: column;
-      gap: 0;
+      align-items: flex-start;
     }
 
     /* ─── TRAJETÓRIA / QUEM SOMOS ─── */
@@ -1567,6 +1567,12 @@
     .parceiro-tile img[alt="PROCON-SP Racial"] {
       max-height: 46px;
       max-width: 120px;
+    }
+    .parceiro-tile img[alt="Fecomércio SP"],
+    .parceiro-tile img[alt="IDV"],
+    .parceiro-tile img[alt="Fenavist"] {
+      max-height: 78px;
+      max-width: 180px;
     }
 
     .parceiro-name {
