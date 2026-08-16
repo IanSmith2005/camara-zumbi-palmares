@@ -1,19 +1,32 @@
 /* ============================================================
    BLOG — Câmara de Mediação Racial nas Relações de Consumo
-   Comportamento: ajuste de altura mobile, nav e animação de entrada.
+   Barra de progresso, nav, animações de entrada.
    ============================================================ */
 
-/* Corrige a altura em telas mobile (barra de endereço) */
+/* Altura mobile (barra de endereço) */
 function setVh() {
   document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
 }
 setVh();
 window.addEventListener('resize', setVh);
 
-/* Botão "Acionar a Câmara" fica vermelho ao rolar a página */
+/* Barra de progresso de leitura + estado do botão da nav */
+const progress = document.getElementById('progress');
 const navCta = document.querySelector('.nav-cta');
-window.addEventListener('scroll', () => {
+function onScroll() {
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+  if (progress) progress.style.width = pct + '%';
   if (navCta) navCta.classList.toggle('scrolled', window.scrollY > 60);
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* Anima o risco embaixo da palavra em destaque do título */
+window.addEventListener('load', () => {
+  const mh = document.querySelector('.masthead');
+  if (mh) mh.classList.add('lit');
 });
 
 /* Animação fade-up ao entrar na tela */
