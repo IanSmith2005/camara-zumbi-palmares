@@ -1370,6 +1370,39 @@
       stroke-linejoin: round;
       flex-shrink: 0;
     }
+    .btn-regulamento-oficial {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Archivo', 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--marrom);
+      background: var(--laranja);
+      border: 1.5px solid var(--laranja);
+      padding: 13px 26px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 6px;
+      box-shadow: 0 4px 14px rgba(201, 160, 80, 0.35);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .btn-regulamento-oficial:hover {
+      background: #dbb666;
+      box-shadow: 0 6px 18px rgba(201, 160, 80, 0.45);
+      transform: translateY(-1px);
+    }
+    .btn-regulamento-oficial svg {
+      width: 16px; height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
     .camara-buttons {
       display: flex;
       flex-direction: column;
@@ -1781,5 +1814,5 @@
     /* ─── RESPONSIVE: CAMARA BUTTONS ─── */
     @media (max-width: 580px) {
       .camara-buttons { gap: 8px; }
-      .btn-regulamento, .btn-principios { font-size: 10px; padding: 10px 16px; }
+      .btn-regulamento, .btn-principios, .btn-regulamento-oficial { font-size: 10px; padding: 10px 16px; }
     }
