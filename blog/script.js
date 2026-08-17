@@ -23,6 +23,23 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
+/* Menu mobile */
+const navToggle = document.getElementById('nav-toggle');
+const navLinksEl = document.getElementById('nav-links');
+if (navToggle && navLinksEl) {
+  const closeMenu = () => {
+    navLinksEl.classList.remove('nav-links--open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinksEl.classList.toggle('nav-links--open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinksEl.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
 /* Anima o risco embaixo da palavra em destaque do título */
 window.addEventListener('load', () => {
   const mh = document.querySelector('.masthead');

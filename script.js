@@ -16,6 +16,23 @@
     });
   });
 
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinksEl = document.getElementById('nav-links');
+  if (navToggle && navLinksEl) {
+    const closeMenu = () => {
+      navLinksEl.classList.remove('nav-links--open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinksEl.classList.toggle('nav-links--open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinksEl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
+
   // Gold nav button only after scrolling past hero
   const navCta = document.querySelector('.nav-cta');
   const hero = document.querySelector('.hero');
