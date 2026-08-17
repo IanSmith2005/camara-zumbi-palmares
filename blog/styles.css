@@ -57,14 +57,11 @@ a { color: inherit; }
 
 /* ====================== NAV ====================== */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: sticky; top: 0; left: 0; right: 0; z-index: 100;
   padding: 8px 44px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
   background: rgba(26,42,62,0.96);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(189,152,84,0.30);
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  will-change: transform;
 }
 .nav-logo { text-decoration: none; display: flex; align-items: center; gap: 14px; }
 .nav-logo img { height: 64px; width: auto; opacity: 0.95; }
@@ -157,7 +154,7 @@ nav {
 .nav-cta.scrolled:hover { box-shadow: 0 0 20px rgba(189,152,84,0.5); }
 
 /* ====================== MASTHEAD / HERO ====================== */
-.masthead { position: relative; overflow: hidden; background: var(--marinho); padding: 140px 60px 76px; }
+.masthead { position: relative; overflow: hidden; background: var(--marinho); padding: 60px 60px 76px; }
 .masthead::before {
   content: ''; position: absolute; inset: 0; z-index: 0;
   background:
@@ -360,7 +357,7 @@ footer ul li a:hover { color: var(--dourado); }
 /* ====================== RESPONSIVO ====================== */
 @media (max-width: 960px) {
   nav { padding: 8px 22px; }
-  .masthead { padding: 120px 22px 60px; }
+  .masthead { padding: 40px 22px 60px; }
   .bloco { padding: 60px 22px; }
   .capa { grid-template-columns: 1fr; }
   .capa-cover { min-height: 220px; }
@@ -373,6 +370,7 @@ footer ul li a:hover { color: var(--dourado); }
   .grid, .grid-2 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   nav { padding: 8px 14px; gap: 10px; }
+  .masthead { padding-top: 32px; }
   .nav-logo img { height: 48px; }
   .nav-brand { padding-left: 10px; gap: 0; }
   .nav-brand-sub { display: none; }
